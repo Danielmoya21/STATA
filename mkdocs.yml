@@ -1,0 +1,15 @@
+site_name: Repositorio de Laboratorios
+nav:
+  - Laboratorios: index.md
+  - Practicas: Practicas.md
+  - Videos: Videos.md
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+    - stata
+    - python
+code:
+    highlight_theme: readthedocs 
