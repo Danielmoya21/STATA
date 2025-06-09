@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../lab1/">
+      
+      
+        <link rel="next" href="../../practicas/stata1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Index 2 - Datos Económicos UCR</title>
+        <title>Semana 13 - Datos Económicos UCR</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#index-2" class="md-skip">
+        <a href="#factor-de-expansion" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index 2
+              Semana 13
             
           </span>
         </div>
@@ -216,10 +220,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../lab1/" class="md-tabs__link">
           
   
@@ -337,24 +343,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -367,7 +378,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Laboratorios
@@ -401,10 +412,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../semana_13/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -415,6 +435,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -649,7 +670,139 @@
 
 
 
-<h1 id="index-2">Index 2</h1>
+<h1 id="factor-de-expansion">Factor de Expansión</h1>
+<p>Vamos a empezar cargando la base de datos </p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span> <span class="s">&quot;la ubicacion del archivo en la computadora&quot;</span>,<span class="k"> clear</span>
+</code></pre></div>
+<p>La base tiene ~30,000 mil observaciones, sin embargo, cuando el INEC publica resultados de la situación socioeconómica del país presenta datos extrapolados para todo el país. </p>
+<div class="admonition warning">
+<p class="admonition-title">Pregunta</p>
+<p>¿Cómo es entonces que puede hacer estadísticas sobre 5 millones de personas con una encuesta de 30 mil observaciones?</p>
+</div>
+<p>Si utilizamos el comando tab, podemos hacer una tabla descriptiva de algunas variables. Realicemos una tabla para el nivel de pobreza según la región.</p>
+<p><div class="highlight"><span class="filename">Tab normal</span><pre><span></span><code><span class="k">tab</span> REGION np
+</code></pre></div>
+Como podrá observar la tabla nos muestra el total de personas según su condicón de pobreza y región de planificación, en total hay  30,514 observaciones. Si queremos saber a cuanto equivalen estos datos con respecto al total de la población, debemos usar el <strong>factor de ponderación o expansión</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Factor de ponderación</p>
+<p>El factor de ponderación se utiliza para ajustar la representación en
+una encuesta. Nos dice cuánto representa una observación en términos poblacionales.</p>
+</div>
+<p>Por ejemplo, si en el país hay más mujeres que hombres, pero en la encuesta se entrevistan igual número de mujeres que de hombres, entonces el factor de expansión da mayor peso a las mujeres.</p>
+<p>En Stata simplemente añadimos la opción <strong>[w=variable]</strong> aquí w significa weight, es decir el peso de cada observación y la variable que tiene el peso de cada observación es "FACTOR"</p>
+<p><div class="highlight"><span class="filename">Tab con pesos</span><pre><span></span><code><span class="k">tab</span> REGION np [w=FACTOR]
+</code></pre></div>
+Como puede ver la tabla ahora muestra un total de 5,257,304 de observaciones. Esto quiere decir que estamos expandiendo los datos para todo el país.</p>
+<div class="admonition note">
+<p class="admonition-title">Diferentes tipos de pesos</p>
+<p><strong>Frecuency weights (fweight):</strong>  Se le indica a Stata que una sola
+línea representa observaciones de múltiples personas</p>
+<p><strong>Analytic weights (aweight)</strong>: Se usan cuando cada observación
+es una media calculada a partir de una muestra de tamaño n.</p>
+<p><strong>Sample weights (pweight)</strong>: También conocidas como
+ponderaciones de probabilidad, son adecuadas cuando se
+realiza un muestreo aleatorio sin reemplazo.</p>
+</div>
+<p>Podríamos también usarlo con variables que hayamos creado nosotros.</p>
+<div class="highlight"><span class="filename">Creamos variable de pobreza</span><pre><span></span><code><span class="c1">*Ponemos personas pobres en categoría 1 y no pobres en categoría 0</span>
+<span class="k">recode</span> np (<span class="m">2</span>=<span class="m">1</span>) (<span class="m">3</span>=<span class="m">0</span>),<span class="k"> gen</span>(pobre_dicotomica)
+<span class="c1">*Creamos la tabla</span>
+<span class="k">tab</span> pobre_dicotomica [w=FACTOR]
+</code></pre></div>
+<hr />
+<h1 id="combinar-bases-de-datos">Combinar bases de datos</h1>
+<p>Algo muy común que sucede cuando se está realizando una investigación es querer analizar un problema a lo largo del tiempo, sin embargo, todas las bases de datos con las que hemos trabajado hasta el momento incluyen solo las observaciones para un año en específico.</p>
+<p>Suponga que usted quiere ver la evolución de la pobreza a lo largo de los últimos 3 años. Para poder realizar esto deberíamos analizar las bases de datos del 2023, 2024 y 2025. Sería más práctico combinar las bases de datos, que analizar una base a la vez.</p>
+<div class="admonition danger">
+<p class="admonition-title">Comando append</p>
+<p>El comando <strong>append</strong> nos permite juntar bases de datos de manera vertical</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">append</span> using <span class="s">&quot;base_2.dta&quot;</span>
+</code></pre></div>
+<p>Utilizando append podemos juntar las bases de datos de ambos años y trabajar con una sola base de datos.</p>
+<p>Hasta ahora todo funciona bien, pero si observa la base de datos, notará que no puede diferenciar cuales observaciones pertenecen a cada año. </p>
+<div class="admonition tip">
+<p class="admonition-title">Generar identificadores</p>
+<p>Podemos evitar este problema generando un <strong>identificador</strong> con la opción gen(variable)
+<div class="highlight"><pre><span></span><code><span class="k">append</span> using <span class="s">&quot;base_2.dta&quot;</span>,<span class="k"> gen</span>(anno)
+</code></pre></div></p>
+</div>
+<p>Una vez hecho esto podríamos analizar por ejemplo como cambió el porcentaje de personas según su condición de pobreza.</p>
+<p>Podemos hacerlo mediante un gráfico de barras.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">*Note que para un gráfico de porcentaje no es necesario poner una variable antes de la coma</span>
+<span class="c1">*con asyvars le decimos que a STATA que use diferentes colores para la variable que pusimos en el primer over()</span>
+<span class="c1">*En este caso el anno</span>
+<span class="k">graph</span> bar (percent) [w=FACTOR], over(anno) over(np) asyvars
+<span class="k">graph</span> box Escolari [w=FACTOR]<span class="k"> if</span> Escolari<span class="o">!=</span><span class="m">99</span>, over(anno)
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Nota</p>
+<p>Note el uso del factor de expansión para hacer el gráfico</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Otras manipulaciones</p>
+<ul>
+<li><strong>Merge</strong>: Une bases de datos con una columna en común de forma horizontal</li>
+<li><strong>Collapse</strong>: Resume datos. Permite reducir la base de datos a estadísticas descriptivas</li>
+</ul>
+<p>*Estas no son cubiertas en el curso </p>
+</div>
+<hr />
+<h1 id="medidas-de-concentracion">Medidas de concentración</h1>
+<h2 id="repaso-sobre-percentiles">Repaso sobre percentiles</h2>
+<p>A veces es muy útil dividir a la población en percentiles, sobretodo cuando se estudia un tema como la desigualdad</p>
+<p>Para esto trabajabamos con 2 comandos principales en Stata</p>
+<div class="admonition danger">
+<p class="admonition-title">xtile</p>
+<p>Genera una variable categórica que indica el percentil al que pertenece la observación.</p>
+<p>Syntaxis
+<div class="highlight"><pre><span></span><code><span class="k">xtile</span> nueva_variable = expresión, nquantiles(#)
+</code></pre></div></p>
+</div>
+<p><div class="highlight"><pre><span></span><code><span class="k">xtile</span> quintil = ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span>, nquantiles(<span class="m">5</span>)
+</code></pre></div>
+Esto genera una variable con números del 1 al 5 indicando el quintil de ingreso al que pertenece la persona</p>
+<p>Ahora podemos hacer análisis por quintiles, por ejemplo ver los años de escolaridad promedio:
+<div class="highlight"><pre><span></span><code><span class="k">tab</span> quintil,<span class="k"> sum</span>(Escolari)<span class="k"> mean</span>
+</code></pre></div></p>
+<div class="admonition danger">
+<p class="admonition-title">pctile</p>
+<p>Nos indica el valor de los percentiles</p>
+<p>Syntaxis
+<div class="highlight"><pre><span></span><code><span class="k">pctile</span> nueva_variable = expresión, nquantiles(#)
+</code></pre></div></p>
+</div>
+<p><div class="highlight"><pre><span></span><code><span class="k">pctile</span> valores = ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span>, nquantiles(<span class="m">5</span>)
+<span class="k">tab</span> valores
+</code></pre></div>
+Esto nos muestra una tabla con el valor del ingreso que corresponde al quintil 1, 2, 3 y 4</p>
+<h2 id="coeficiente-de-gini-y-curva-de-lorenz">Coeficiente de Gini y Curva de Lorenz</h2>
+<p>En esta sección vamos a trabajar con el uso de paquetes externos que nos permiten computar la Curva de Lorenz y el Coeficiente de Gini</p>
+<div class="admonition tip">
+<p class="admonition-title">Paquetes de terceros</p>
+<p>Recuerde que para instalar paquetes de terceros usamos <code>ssc install [nombre del paquete]</code></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">ssc</span> install glcurve
+</code></pre></div>
+<p>Si no estamos seguros de como instalar un paquete podemos escribir <code>help [nombre del paquete]</code>, por ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="k">help</span> ginidesc
+</code></pre></div>
+<p>Este comando abrirá un menú con opciones de paquetes a descargar. Si el paquete ya está instalado, abre el menú de ayuda.</p>
+<p>Una vez instalados los comandos podemos calcular el índice de Gini con el comando <code>ginidesc</code></p>
+<p><div class="highlight"><pre><span></span><code>ginidesc ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span> <span class="o">&amp;</span> anno<span class="o">==</span><span class="m">2024</span>
+</code></pre></div>
+<code>ginidesc</code> muestra una tabla en la consola con el coeficiente de Gini. Además, muestra la desigualdad que puede ser atribuida a desigualdad entre grupos y dentro de los grupos </p>
+<p>Como ejemplo podemos ver el coeficiente de Gini por region y analizar cuánto de la desigualdad se debe a brechas entre grupos</p>
+<div class="highlight"><pre><span></span><code>ginidesc ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span> <span class="o">&amp;</span> anno<span class="o">==</span><span class="m">2024</span>,<span class="k"> by</span>(REGION)
+</code></pre></div>
+<p>También podemos computar la Curva de Lorenz con <code>glcurve</code>, para tener una representación visual de la desigualdad del país</p>
+<div class="highlight"><pre><span></span><code>glcurve ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span> <span class="o">&amp;</span> anno<span class="o">==</span><span class="m">2024</span>, <span class="cs">///</span>
+lorenz title(<span class="s">&quot;Curva de Lorenz Costa Rica 2024&quot;</span>) <span class="cs">///</span>
+scheme(plotplain) <span class="cs">///</span>
+ytitle(<span class="s">&quot;Porcentaje acumulado de ingreso&quot;</span>) <span class="cs">///</span>
+xtitle(<span class="s">&quot;Porcentaje acumulado de personas&quot;</span>)<span class="k"> plot</span>(function equality=x, color(blue))
+</code></pre></div>
+<p><a href="dofiles/dofile_semana13.do" download>Puede descargar el dofile aquí</a></p>
 
 
 

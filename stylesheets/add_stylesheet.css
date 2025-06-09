@@ -1,0 +1,7 @@
+:root > * {
+  --md-code-hl-string-color: #FF0000;
+}
+
+.md-typeset hr {
+  border-top-width: 4px; /* Adjust thickness as desired */
+}
