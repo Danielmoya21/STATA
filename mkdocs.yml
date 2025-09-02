@@ -1,15 +1,48 @@
-site_name: Repositorio de Laboratorios
+site_name: Datos Económicos UCR
 nav:
-  - Laboratorios: index.md
-  - Practicas: Practicas.md
-  - Videos: Videos.md
+  - Introducción: labs/index.md
+  - Laboratorios:
+    - "Semana 5": labs/semana_5.md
+    - "Semana 13": labs/semana_13.md
+  - Practicas:
+    - "Quiz Stata 1": practicas/stata1.md
+  - Videos:
+    - "Videos": videos.md
 theme:
-  name: readthedocs
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - rust
-    - stata
-    - python
-code:
-    highlight_theme: readthedocs 
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: teal
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: teal
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.annotate
+    - content.code.copy
+plugins:
+  - search
+  - macros
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - attr_list
+extra_css:
+  - stylesheets/add_stylesheet.css
+
+highlightjs: true
+hljs_languages:
+  - yaml
+  - rust
+  - stata
+  - python

@@ -1,0 +1,26 @@
+:root > * {
+  --md-code-hl-string-color: #FF0000;
+}
+
+.md-typeset hr {
+  border-top-width: 4px; /* Adjust thickness as desired */
+  color: #606067;
+}
+
+img {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+/* 
+:root,
+[data-md-color-scheme="default"] {
+  --title-color: #56585d;
+}
+
+[data-md-color-scheme="slate"] {
+  --title-color: #fff;
+} */
