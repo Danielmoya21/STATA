@@ -1,5 +1,9 @@
 
+cd "C:\Users\dmoya\OneDrive\Desktop\UCR\Cursos\Datos Economicos\Labs\Semana 13"
+
+
 use "C:\Users\dmoya\OneDrive\Desktop\UCR\Papaer migracion\ENAHOS\enaho_2023.dta", clear
+use "C:\Users\dmoya\OneDrive\Desktop\UCR\Papaer migracion\ENAHOS\enaho_2022.dta", clear
 
 *Tab Normal
 tab REGION np
@@ -36,7 +40,7 @@ ssc install glcurve
 help ginidesc
 
 *Calculo del indice de Gini
-ginidesc ipcn if ipcn>0
+capture ginidesc ipcn if ipcn>0
 
 *Gini por region
 ginidesc ipcn if ipcn>0, by(REGION)
