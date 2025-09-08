@@ -3,8 +3,9 @@
 }
 
 .md-typeset hr {
-  border-top-width: 4px; /* Adjust thickness as desired */
-  color: #606067;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 0px;
+  margin: 2em 0;
 }
 
 img {
@@ -15,12 +16,34 @@ img {
     width: auto;
 }
 
-/* 
-:root,
-[data-md-color-scheme="default"] {
-  --title-color: #56585d;
+/* default theme */
+[data-md-color-scheme="default"] .md-typeset p > code {
+  color: #c74ca4;
+  background-color: #f9f2f4;
+}
+/* Dark theme */
+[data-md-color-scheme="slate"] .md-typeset p > code {
+  color: #ffb6db;
+  background-color: #2a1e23;
 }
 
-[data-md-color-scheme="slate"] {
-  --title-color: #fff;
-} */
+[data-md-color-scheme="default"] .md-typeset td > code {
+  color: #c74ca4;
+  background-color: #f9f2f4;
+}
+/* Dark theme */
+[data-md-color-scheme="slate"] .md-typeset td > code {
+  color: #ffb6db;
+  background-color: #2a1e23;
+}
+
+/* Light mode */
+[data-md-color-scheme="default"] .md-typeset table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+/* --md-default-bg-color--lighter */
+/* Dark mode */
+[data-md-color-scheme="slate"] .md-typeset th {
+  background-color: var(--md-default-bg-color--light);
+}
+

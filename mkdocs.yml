@@ -1,6 +1,6 @@
 site_name: Datos Económicos UCR
 nav:
-  - Introducción: labs/index.md
+  - Introducción: index.md
   - Laboratorios:
     - "Semana 5": labs/semana_5.md
     - "Semana 13": labs/semana_13.md
@@ -30,19 +30,20 @@ plugins:
   - search
   - macros
 markdown_extensions:
+  - tables
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: false
-  - attr_list
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+
 extra_css:
   - stylesheets/add_stylesheet.css
-
-highlightjs: true
-hljs_languages:
-  - yaml
-  - rust
-  - stata
-  - python
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css
