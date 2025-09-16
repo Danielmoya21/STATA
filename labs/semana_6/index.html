@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../semana_5/">
       
       
-        <link rel="next" href="../semana_6/">
+        <link rel="next" href="../semana_13/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Semana 5 - Datos Económicos UCR</title>
+        <title>Semana 6 - Datos Económicos UCR</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interfaz-de-stata-e-importacion-de-bases-de-datos" class="md-skip">
+        <a href="#comandos" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semana 5
+              Semana 6
             
           </span>
         </div>
@@ -226,7 +226,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../semana_5/" class="md-tabs__link">
           
   
   
@@ -389,6 +389,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -398,15 +421,13 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Semana 5
+    Semana 6
     
   </span>
   
@@ -419,7 +440,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 5
+    Semana 6
     
   </span>
   
@@ -431,8 +452,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -452,78 +471,64 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use" class="md-nav__link">
+  <a href="#cd" class="md-nav__link">
     <span class="md-ellipsis">
-      use
+      cd
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#browse" class="md-nav__link">
+  <a href="#import-excel" class="md-nav__link">
     <span class="md-ellipsis">
-      browse
+      import excel
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ds" class="md-nav__link">
+  <a href="#save" class="md-nav__link">
     <span class="md-ellipsis">
-      ds
+      save
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#order" class="md-nav__link">
+  <a href="#labels" class="md-nav__link">
     <span class="md-ellipsis">
-      order
+      labels
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      opciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de variables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de variables">
+    <nav class="md-nav" aria-label="labels">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#destring" class="md-nav__link">
+  <a href="#label-define" class="md-nav__link">
     <span class="md-ellipsis">
-      destring
+      label define
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gsort" class="md-nav__link">
+  <a href="#label-values" class="md-nav__link">
     <span class="md-ellipsis">
-      gsort
+      label values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      label var
     </span>
   </a>
   
@@ -533,13 +538,54 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-comandos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generate" class="md-nav__link">
     <span class="md-ellipsis">
-      Resumen de comandos
+      generate
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      rename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      drop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keep" class="md-nav__link">
+    <span class="md-ellipsis">
+      keep
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -547,29 +593,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../semana_6/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Semana 6
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -764,8 +787,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -784,78 +805,64 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use" class="md-nav__link">
+  <a href="#cd" class="md-nav__link">
     <span class="md-ellipsis">
-      use
+      cd
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#browse" class="md-nav__link">
+  <a href="#import-excel" class="md-nav__link">
     <span class="md-ellipsis">
-      browse
+      import excel
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ds" class="md-nav__link">
+  <a href="#save" class="md-nav__link">
     <span class="md-ellipsis">
-      ds
+      save
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#order" class="md-nav__link">
+  <a href="#labels" class="md-nav__link">
     <span class="md-ellipsis">
-      order
+      labels
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      opciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de variables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de variables">
+    <nav class="md-nav" aria-label="labels">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#destring" class="md-nav__link">
+  <a href="#label-define" class="md-nav__link">
     <span class="md-ellipsis">
-      destring
+      label define
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gsort" class="md-nav__link">
+  <a href="#label-values" class="md-nav__link">
     <span class="md-ellipsis">
-      gsort
+      label values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      label var
     </span>
   </a>
   
@@ -865,13 +872,54 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-comandos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generate" class="md-nav__link">
     <span class="md-ellipsis">
-      Resumen de comandos
+      generate
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      rename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      drop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keep" class="md-nav__link">
+    <span class="md-ellipsis">
+      keep
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -891,226 +939,216 @@
 
 
 
-<h1 id="interfaz-de-stata-e-importacion-de-bases-de-datos">Interfaz de STATA e importación de bases de datos</h1>
-<p>Para empezar a trabajar con una base de datos lo primero es abrir un archivo de tipo do, donde vamos a escribir los comandos para que decirle a STATA lo que queremos que haga.</p>
-<p><img alt="imagen" src="../../images/semana5/abrir_dofile.png" /></p>
-<p>Esto va a abrir un cuaderno que se vería así.</p>
-<p><img alt="imagen" src="../../images/semana5/dofile.png" /></p>
-<p>Una vez abierto el dofile podemos empezar a trabajar con <code>STATA</code></p>
-<hr />
+  <h1>Semana 6</h1>
+
 <h2 id="comandos">Comandos</h2>
-<h3 id="use">use</h3>
-<p>El primer comando que veremos es <code>use</code> el cual nos sirve para cargar archivos de formato <code>STATA</code> </p>
-<div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">use</span> <span class="s">&quot;ruta de acceso al archivo en mi computadora&quot;</span>
-</code></pre></div>
-<p>Por ejemplo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">use</span> <span class="s">&quot;C:\Users\dmoya\Downloads\enaho_2023.dta&quot;</span>
-</code></pre></div>
-<p>Una vez que escribe esto en el dofile puede correr el comando usando <code>ctrl+D</code> o dando click en el siguiente ícono <img alt="image" src="../../images/semana5/run_cmd.png" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Posibles errores</p>
-<ul>
-<li>Verifique que la ruta sea correcta (puede copiarla seleccionando el archivo y usando <code>ctrl+shift+c</code>)</li>
-<li>Si intenta volver a correr el comando posiblemente tenga un error (explicación más adelante)</li>
-</ul>
-</div>
-<p>Luego de ejecutar un comando, <code>STATA</code> nos indica el resultado en la consola que es la pantalla grande que se puede ver al inicio. Aquí nos muestra que ejeutó el comando  <code>use</code>.</p>
-<p>Puede también verificar que cargó los datos revisando la pestaña de variables que se encuentra a la derecha
-<img alt="image" src="../../images/semana5/variables.png" /></p>
-<p>Seguro se puede estar preguntando ¿dónde veo los datos?</p>
 <hr />
-<h3 id="browse">browse</h3>
-<p>Para ver los datos podemos usar el comando <code>browse</code> o podemos dar click en el explorador de variables</p>
-<p><strong>Opción 1:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">*Escribir browse en el dofile y ejecutarlo</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">browse</span>
-</code></pre></div></p>
-<p><strong>Opción 2:</strong> </p>
-<p>De click en el siguiente ícono
-<img alt="image" src="../../images/semana5/browse.png" /></p>
-<p>En cualquiera de los dos casos se abrirá una pestaña adicional con los datos en formato de tabla
-<img alt="image" src="../../images/semana5/explorador.png" /></p>
-<p>Aquí puede ver las diferentes variables con las que contamos, en nuestro caso estamos trabajando con la encuesta de hogares, por lo que cada fila representa una persona y sus características, por ejemplo: la región, la zona, el sexo, su nivel de instrucción, etc.</p>
-<hr />
-<h3 id="ds">ds</h3>
-<p>Si quisieramos simplemente ver las variables que tenemos disponibles podemos usar <code>ds</code>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">*El resultado se muestra en la consola</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">ds</span>
-</code></pre></div>
-<img alt="image" src="../../images/semana5/ds.png" /></p>
-<hr />
-<h3 id="order">order</h3>
-<p>A veces trabajamos con bases de datos muy grandes. Una encuesta de hogares puede tener hasta más de <strong>500</strong> columnas. ¿Qué pasaría por ejemplo, si variable de interés está en la columna 400?</p>
-<p>Para estos casos es útil saber como reordenar la base de datos para que las columnas que nos interesan sean fáciles de ver.</p>
-<p>Usando <code>order</code> podemos indicarle a <code>STATA</code> qué columnas queremos que nos muestre al inicio</p>
-<p><div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">order</span> variable1 variable2 ...
-</code></pre></div>
-En nuestro caso, si quisieramos colocar el nivel de instrucción al inicio se vería así
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">order</span> nivinst
-</code></pre></div></p>
-<hr />
-<h3 id="opciones">opciones</h3>
+<h3 id="cd">cd</h3>
 <div class="admonition info">
-<p class="admonition-title">Opciones</p>
-<p>También es posible agregar <code>opciones</code> a los comandos con la finalidad de indicar cosas adicionales</p>
+<p class="admonition-title">Directorio de trabajo</p>
+<p>Cuando trabajamos con programas como STATA es importante tener en cuenta que existe algo llamado directorio de trabajo. Puede pensar en el directorio de trabajo como la carpeta en la que STATA busca y guarda archivos en la computadora.</p>
 </div>
-<p>Por ejemplo, si queremos ordenar la columna, detrás de alguna otra podemos indicarlo.</p>
-<p>En general para poner añadir opciones a cualquier comando se sigue la siguiente syntaxis</p>
-<div class="highlight"><span class="filename">opciones</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>comando <span class="o">&lt;</span>argumentos<span class="o">&gt;</span>, opciones
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">*Ejemplo</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">order</span> nivinst, after(region)
-</code></pre></div>
-<div class="admonition danger">
-<p class="admonition-title">Cuidado</p>
-<p>Es importante añadir los paréntesis después de after, ya que <code>STATA</code> separa las opciones por espacios.</p>
-<p>Entonces con los paréntesis le decimos a <code>STATA</code> el argumento a usar para la opción after</p>
-<p>Si solo escribimos 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">order</span> nivinst, after region
-</code></pre></div></p>
-<p><code>STATA</code> piensa que region es otra opción y nos dará error</p>
-</div>
-<p>En general se escribe así
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>comando  <span class="o">&lt;</span>argumentos<span class="o">&gt;</span>, opcion1(argumento) opcion2(argumento) ...
-</code></pre></div></p>
-<p>También podemos decirle que acomode la variable al final</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">order</span> nivinst, last
-</code></pre></div>
-<hr />
-<h2 id="tipos-de-variables">Tipos de variables</h2>
-<p>Un tema muy importante a tener en cuenta es que existen diferentes tipos de variables. Con esto nos referimos a la forma en la que STATA guarda los valores.</p>
-<div class="admonition question">
-<p class="admonition-title">Qué tipos existen</p>
-</div>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Tipo</th>
-<th style="text-align: center;">Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong><em>Texto</em></strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>String</code></td>
-<td style="text-align: center;">Texto o caracteres</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong><em>Numéricas</em></strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>byte</code></td>
-<td style="text-align: center;">Entero muy pequeño</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>int</code></td>
-<td style="text-align: center;">Entero mediano</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>long</code></td>
-<td style="text-align: center;">Entero grande</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>float</code></td>
-<td style="text-align: center;">Decimal con precisión simple</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>double</code></td>
-<td style="text-align: center;">Decimal con mayor precisión</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Problemas</p>
-<p>Esto puede parecer poco importante, pero es necesario tenerlo en cuenta para evitar errores como este:</p>
-</div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">*Calcular promedio del salario</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">mean</span> spmb
-</code></pre></div>
-<img alt="image" src="../../images/semana5/mean_error.png" /></p>
-<p>Cuando <code>STATA</code> nos muestra un texto rojo significa que no pudo ejecutar el comando debido a un error.</p>
-<p>En este caso intentamos calcular el promedio del salario bruto de las personas, pero el obtenemos un error que dice spmb es una variable de tipo <code>string</code>. </p>
-<p>Es decir, a pesar de que podemos ver números en la columna <code>STATA</code> tiene la variable guardada como texto, por lo que no puede calcular el promedio.</p>
-<p><img alt="image" src="../../images/semana5/type.png" /></p>
-<p>Podemos observar el tipo de variable almacenado en <code>STATA</code> en la pestaña de propiedades abajo a la derecha y veremos que el tipo dice <code>str</code> o sea <code>string</code></p>
-<hr />
+<p>Es importante tener esto en cuenta porque cuando guardemos archivos, por ejemplo un gráfico, STATA lo guarda en nuestro directorio de trabajo actual.</p>
 <div class="admonition info">
-<p class="admonition-title">Convertir variables</p>
-<p>En estos casos es necesario convertir el tipo de variables</p>
+<p class="admonition-title">cd</p>
+<p><code>cd</code> signficia change directory y nos permite cambiar la carpeta en la que estamos trabajando.</p>
+<p><code>pwd</code> nos permite ver la carpeta que estamos usando </p>
 </div>
-<h3 id="destring">destring</h3>
-<div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">destring</span> variable,<span class="k"> replace</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1">*replace remplaza la variable original</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1">*Si no queremos remplazar la variable original </span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">destring</span> variable,<span class="k"> gen</span>(nombre_variable_nueva)
-</code></pre></div>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">destring</span> spmb,<span class="k"> replace</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">mean</span> spmb
+<div class="highlight"><span class="filename">change directory</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">*Primero podemos ver la carpeta inicial</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">pwd</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">*Luego podemos cambiarla usando cd</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">cd</span> <span class="s">&quot;C:\Users\dmoya\Downloads\Lab6&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">pwd</span>
 </code></pre></div>
 <details class="success">
 <summary>Resultado</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Mean estimation                   Number of obs   =      <span class="m">9</span>,<span class="m">562</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">--------------------------------------------------------------</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>            |       Mean   Std. Err.     [<span class="m">95</span>% Conf. Interval]
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="o">-------------+------------------------------------------------</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        spmb |   <span class="m">536077.6</span>   <span class="m">5269.032</span>      <span class="m">525749.2</span>      <span class="m">546406</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="o">--------------------------------------------------------------</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="c1">*Ya no obtenemos errores!</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">*Primera carpeta</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>C:\Users\dmoya\AppData\Local\PowerToys
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">*Luego de cambiarla</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>C:\Users\dmoya\Downloads\Lab6
 </code></pre></div>
 </details>
+<p><br></p>
 <hr />
-<h3 id="gsort">gsort</h3>
-<p>Con gsort podemos ordenar la base de datos con respecto a alguna variable</p>
-<p>Ejemplo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">gsort</span> spmb
+<h3 id="import-excel">import excel</h3>
+<p>En la clase pasada vimos que se podían cargar archivos de STATA usando <code>use</code></p>
+<p>Podemos tratar de abrir la base de datos para este laboratorio</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">use</span> <span class="s">&quot;base_lab6.xlsx&quot;</span>
 </code></pre></div>
+<p>Pero esto nos da el siguiente error</p>
+<details class="failure">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s">&quot;file base_lab6.xlsx not Stata format&quot;</span>
+</code></pre></div>
+</details>
+<p>Esto ocurre porque el formato del archivo es de <code>xlsx</code> o sea formato Excel, pero <code>use</code> sirve para cargar solo archivos de STATA.</p>
+<p>Para cargar archivos en otros formatos hay que usar el comando <code>import</code> y especificar el tipo de archivo.</p>
+<div class="highlight"><span class="filename">import excel</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import excel <span class="s">&quot;base_lab6.xlsx&quot;</span>, firstrow
+</code></pre></div>
+<p>La opción <code>firstrow</code> le indica a STATA que la primera fila del archivo tiene los nombres de las variables</p>
+<p><br></p>
 <hr />
-<h2 id="resumen-de-comandos">Resumen de comandos</h2>
+<h3 id="save">save</h3>
+<p>Otra utilidad que tenemos es que podemos guardar la base de datos en formato <code>STATA</code> o <code>.dta</code>. Para esto usamos <code>save</code>.</p>
+<div class="highlight"><span class="filename">save</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">save</span> base_lab6
+</code></pre></div>
+<p>Llegados a este punto podemos analizar la base de datos</p>
+<p><br></p>
+<hr />
+<h3 id="labels">labels</h3>
+<p>Lo primero que podemos observar es la variable idioma. Esta indica si la persona habla o no otro idioma; sin embargo, tiene valores numéricos de 0 y 1, por lo que no es claro a qué se refiere cada uno.</p>
+<div class="admonition info">
+<p class="admonition-title">labels</p>
+<p>En este caso sería muy útil indicar que 1 signfica "sí" y 0 significa "no". </p>
+<p>Para esto nos sirven las etiquetas o <code>labels</code></p>
+</div>
+<h4 id="label-define">label define</h4>
+<p>Para crear una etiqueta usamos la siguiente syintaxis</p>
+<div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">label</span> define nombre numero1 <span class="s">&quot;valor1&quot;</span> numero2 <span class="s">&quot;valor2&quot;</span> ...
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">label</span> define label_idioma <span class="m">0</span> <span class="s">&quot;No&quot;</span> <span class="m">1</span> <span class="s">&quot;Sí&quot;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Puede pensar en las etiquetas como un diccionario que me dice la definición de lo que significa cada número.</p>
+</div>
+<p>Luego de ejectuar el comando puede revisar la base de datos, pero verá que aún tenemos solo los valores 0 y 1.</p>
+<div class="admonition warning">
+<p class="admonition-title">aplicar etiquetas</p>
+<p><code>label define</code> solo define una etiqueta, pero en ningún momento la aplicamos a alguna variable.</p>
+</div>
+<h4 id="label-values">label values</h4>
+<p>Para aplicar una etiqueta se usa <code>label values</code> </p>
+<div class="highlight"><span class="filename">label values</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">label</span> values nombre_variable nombre_etiqueta
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">label</span> values idioma label_idioma
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">*Ahora sí aplicó las etiquetas</span>
+</code></pre></div>
+<p><br></p>
+<h4 id="label-var">label var</h4>
+<p>Otra opción útil es añadir etiquetas al nombre de la variable. Esto nos da una breve descripción adicional de la información que contiene una variable.</p>
+<p>Por ejemplo, si queremos aplicar la etiqueta a la variable idioma, podemos hacer lo siguiente.
+<div class="highlight"><span class="filename">label var</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">label var</span> idioma <span class="s">&quot;Indica si la persona es bilingüe&quot;</span>
+</code></pre></div></p>
+<p>La etiqueta la podemos ver en el explorador de variables.</p>
+<p><img alt="image" src="../../images/semana6/label_var.png" /></p>
+<p><br></p>
+<hr />
+<h3 id="generate">generate</h3>
+<p>En la mayoría de casos, cuando estámos realizando una investigación es muy común tener que crear variables adicionales.</p>
+<p>Imagine por ejemplo, que estámos interesados en comparar el desempleo entre dos grupos, jóvenes y personas no jóvenes.</p>
+<p>Tenemos disponible la variable edad, pero nos sería más útil tener una variable que indique si la persona es jóven o no.</p>
+<div class="admonition info">
+<p class="admonition-title">Tip</p>
+<p>Podemos entonces crear una variable nueva que cumpla esta función</p>
+</div>
+<p>En STATA esto se logra usando <code>generate</code>. La syntaxis de generate es la siguiente:</p>
+<div class="highlight"><span class="filename">generate</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">gen</span> nombre_variable = algun_valor
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">gen</span> x=<span class="m">1</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1">*Genera una nueva columna x con el número 1 para todas las filas</span>
+</code></pre></div>
+<p>Este ejemplo es muy simple, pero en nuestro caso necesitamos algo más elaborado, por ejemplo, verificar la edad de la persona.
+Vamos a considerar jóven a aquellos con 25 años o menos.</p>
+<div class="admonition info">
+<p class="admonition-title">Operadores lógicos</p>
+<p>Para lograr esto tenemos que usar operadores lógicos. En seguida se muestran los operadores lógicos y su uso</p>
+</div>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><strong>Comando</strong></th>
-<th style="text-align: center;"><strong>Función</strong></th>
+<th style="text-align: center;"><strong>Operador</strong></th>
+<th style="text-align: center;"><strong>Significado</strong></th>
+<th style="text-align: center;"><strong>Ejemplos</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><code>use</code></td>
-<td style="text-align: center;">Cargar la base de datos</td>
+<td style="text-align: center;">==</td>
+<td style="text-align: center;">Verifica una igualdad</td>
+<td style="text-align: center;">gen x=1 if edad==25</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>browse</code></td>
-<td style="text-align: center;">Abrir explorador de variables</td>
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: center;">Verifica que 2 condiciones sean ciertas</td>
+<td style="text-align: center;">gen x=1 if (edad==25) &amp; (idioma==1)</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>ds</code></td>
-<td style="text-align: center;">Listar variables</td>
+<td style="text-align: center;">!=</td>
+<td style="text-align: center;">Distinto de</td>
+<td style="text-align: center;">gen x=1 if idioma!=1</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>order</code></td>
-<td style="text-align: center;">Acomodar columnas</td>
+<td style="text-align: center;">&lt;</td>
+<td style="text-align: center;">Menor que</td>
+<td style="text-align: center;">gen x=1 if edad &lt; 25</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>destring</code></td>
-<td style="text-align: center;">Convertir string a número</td>
+<td style="text-align: center;">&lt;=</td>
+<td style="text-align: center;">Menor o igual</td>
+<td style="text-align: center;">gen x=1 if edad &lt;= 25</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>gsort</code></td>
-<td style="text-align: center;">Ordenar la base de datos</td>
+<td style="text-align: center;">&gt;</td>
+<td style="text-align: center;">Mayor que</td>
+<td style="text-align: center;">gen x=1 if edad &gt; 25</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;=</td>
+<td style="text-align: center;">Mayor o igual</td>
+<td style="text-align: center;">gen x=1 if edad &gt;= 25</td>
 </tr>
 </tbody>
 </table>
-<p><a href="https://www.dropbox.com/scl/fi/ffrmdpy8s07daqr8txikp/lab5.do?rlkey=4m09zaboqerq6fad4clbiivha&amp;st=721eh8iv&amp;dl=0">Descargar do-file</a></p>
-<p><a href="https://www.dropbox.com/scl/fi/53ntkhz7yzg8fc86snmso/practica.do?rlkey=gkg5c7r8o35npm0jz7oflnhcy&amp;st=y6i21bxx&amp;dl=0">Descargar práctica</a></p>
+<p>En nuestro caso nos sirve usar la condición de menor o igual que</p>
+<div class="admonition warning">
+<p class="admonition-title">destring</p>
+<p>Antes hay que hacer un <code>destring</code> a edad, pero edad contiene valores no numéricos.</p>
+<p>En este caso debemos usar la opción force para ignorar los casos donde no hay números</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">destring</span> edad,<span class="k"> replace</span> force
+</code></pre></div>
+</div>
+<div class="highlight"><span class="filename">generate</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">gen</span> joven=<span class="m">1</span><span class="k"> if</span> edad<span class="o">&lt;=</span><span class="m">25</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">cuidado</p>
+<p>A este punto logramos crear la variable, pero nos falta indicar el valor cuando la persona es menor que 25</p>
+<p>Podríamos intentar usar gen, pero obtendremos un error porque no se puede crear una variable que ya existe</p>
+</div>
+<p><br></p>
+<hr />
+<h3 id="replace">replace</h3>
+<p>En este caso lo que tenemos que hacer es reemplazar el valor de la variable, para esto usamos <code>replace</code></p>
+<p><code>replace</code> nos permite reemplazar valores para variables que ya existen. Su syntaxis es la siguiente:</p>
+<div class="highlight"><span class="filename">replace</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">replace</span> nombre_variable = valor<span class="k"> if</span> condición
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">*Remplzar valores con 0 cuando no es menor que 25</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">replace</span> joven=<span class="m">0</span><span class="k"> if</span> edad<span class="o">&gt;</span><span class="m">25</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="rename">rename</h3>
+<p><code>rename</code> permite cambiar el nombre de una variable</p>
+<p>La syntaxis es la siguiente:</p>
+<div class="highlight"><span class="filename">rename</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">rename</span> variable nuevo_nombre
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">rename</span> joven joven_etiqueta
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="drop">drop</h3>
+<p><code>drop</code> sirve para eliminar alguna variable que no nos interesa mantener en la base de datos</p>
+<div class="highlight"><span class="filename">drop</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">drop</span> cuestionario
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="keep">keep</h3>
+<p><code>keep</code> es útil cuando se quiere mantener solo algunas variables necesarias y eliminar el resto</p>
+<div class="highlight"><span class="filename">keep</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">keep</span> sexo edad idioma joven_etiqueta condact
+</code></pre></div>
 
 
 

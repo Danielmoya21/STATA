@@ -26,7 +26,7 @@ img {
   color: #ffb6db;
   background-color: #2a1e23;
 }
-
+/* default theme */
 [data-md-color-scheme="default"] .md-typeset td > code {
   color: #c74ca4;
   background-color: #f9f2f4;
@@ -37,13 +37,10 @@ img {
   background-color: #2a1e23;
 }
 
-/* Light mode */
+/* default theme */
 [data-md-color-scheme="default"] .md-typeset table tr:nth-child(even) {
   background-color: #f5f5f5;
 }
-/* --md-default-bg-color--lighter */
-/* Dark mode */
-[data-md-color-scheme="slate"] .md-typeset th {
-  background-color: var(--md-default-bg-color--light);
+[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) {
+  background-color: #272a35;
 }
-
