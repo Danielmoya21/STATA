@@ -44,3 +44,7 @@ img {
 [data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) {
   background-color: #272a35;
 }
+
+.md-typeset h3 {
+  color: #009485;
+}

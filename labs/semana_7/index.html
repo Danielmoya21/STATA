@@ -1,0 +1,1268 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../semana_6/">
+      
+      
+        <link rel="next" href="../semana_13/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Semana 7 - Datos Económicos UCR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/add_stylesheet.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comandos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Datos Económicos UCR" class="md-header__button md-logo" aria-label="Datos Económicos UCR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Datos Económicos UCR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semana 7
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../semana_5/" class="md-tabs__link">
+          
+  
+  
+  Laboratorios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../practicas/stata1/" class="md-tabs__link">
+          
+  
+  
+  Practicas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../videos/" class="md-tabs__link">
+          
+  
+  
+  Videos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Datos Económicos UCR" class="md-nav__button md-logo" aria-label="Datos Económicos UCR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Datos Económicos UCR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Laboratorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Semana 7
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 7
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decode" class="md-nav__link">
+    <span class="md-ellipsis">
+      decode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      encode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      codebook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recode" class="md-nav__link">
+    <span class="md-ellipsis">
+      recode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tablas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-con-2-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      tab con 2 variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      sum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gráficos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#histograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      histograma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grafico-de-cajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      gráfico de cajas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 13
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Practicas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/stata1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quiz Stata 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Videos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Videos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../videos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Videos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decode" class="md-nav__link">
+    <span class="md-ellipsis">
+      decode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      encode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      codebook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recode" class="md-nav__link">
+    <span class="md-ellipsis">
+      recode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tablas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-con-2-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      tab con 2 variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      sum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gráficos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#histograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      histograma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grafico-de-cajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      gráfico de cajas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Semana 7</h1>
+
+<h2 id="comandos">Comandos</h2>
+<p>Los economistas están interesados en estudiar diferentes problemas sociales, para lo cual sus principales fuentes de información son las encuestas nacionales, como la ENAHO, ECE y ENIGH.</p>
+<p>En estas bases de datos es común encontrar variables categóricas donde se usan números y se añade una etiqueta para indicar lo que significa.</p>
+<div class="admonition info">
+<p class="admonition-title">Ventajas</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La computadora maneja los números de forma más eficiente</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Se asegura consistencia de las encuestas entre años</li>
+</ul>
+</div>
+<p>Sin embargo, dependiendo del usuario, puede ser mejor trabajar con el texto en lugar de su valor numérico.</p>
+<p><br></p>
+<hr />
+<h3 id="decode">decode</h3>
+<p><code>decode</code> nos permite convertir una variable numérica con etiquetas como sexo, a una variable cuyos valores sean el texto
+<div class="highlight"><span class="filename">decode</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">decode</span> sexo,<span class="k"> gen</span>(sexo_texto)
+</code></pre></div>
+<img alt="image" src="../../images/semana7/decode.png" /></p>
+<p>Esto puede cambiar la forma en la que escribimos condiciones, por ejemplo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">*Si queremos contar la cantidad de hombres</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">*Para la variable sexo usamos</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">count if</span> sexo<span class="o">==</span><span class="m">1</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">*Para la variable sexo_texto usamos</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">count if</span> sexo_texto<span class="o">==</span><span class="s">&quot;Hombre&quot;</span>
+</code></pre></div>
+<!-- !!! info "Etiquetas"
+    Las etiquetas suelen ser útiles porque nos evitan errores al escribir condiciones, los números se pueden usar para ordenar categorías y -->
+
+<p><br></p>
+<hr />
+<h3 id="encode">encode</h3>
+<p><code>encode</code> es el caso contrario, en este más bien nos interesa pasar de una variable con texto a una variable categórica con números y etiquetas</p>
+<div class="admonition info">
+<p class="admonition-title">Ventajas</p>
+<p>Usar códigos numéricos también es útil para ordenar las categorías y puede simplificar la creación de nuevas variables</p>
+</div>
+<p>Imagine por ejemplo que nos interesa comparar el ingreso promedio de personas con bachillerato vs personas sin bachillerato</p>
+<p>Sería útil generar una variable que nos indique si la persona tiene bachillerato</p>
+<p>Podemos usar la variable nivel_educacion, sin embargo, eso implica escribir muchas condiciones</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">gen</span> bachillerato = <span class="m">1</span><span class="k"> if</span> nivel_educacion<span class="o">==</span><span class="s">&quot;Primaria Completa&quot;</span> | nivel_educacion<span class="o">==</span><span class="s">&quot;Primaria Incompleta&quot;</span> ...
+</code></pre></div>
+<p>Escribir la condición en este caso se vuelve complicado, por lo que podemos usar <code>encode</code> para simplificarlo</p>
+<div class="highlight"><span class="filename">encode</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">*Podemos primero definir la etiqueta</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">label</span> define educacion <span class="cs">///</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">0</span> <span class="s">&quot;Ninguno&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">1</span> <span class="s">&quot;Primaria incompleta&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="m">2</span> <span class="s">&quot;Primaria completa&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="m">3</span> <span class="s">&quot;Secundaria incompleta&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="m">4</span> <span class="s">&quot;Secundaria completa&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="m">5</span> <span class="s">&quot;Universitario sin título&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="m">6</span> <span class="s">&quot;Universitario con título&quot;</span> <span class="cs">///</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="m">9</span> <span class="s">&quot;No especificado&quot;</span>,<span class="k"> replace</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1">*Luego generar una nueva variable que use la etiqueta creada</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">encode</span> niv_educativo,<span class="k"> gen</span>(educacion_cat)<span class="k"> label</span>(educacion)
+</code></pre></div>
+<p>Luego de esto veremos que la variable se convierte en categórica; podemos además ver más información usando <code>codebook</code></p>
+<p><br></p>
+<hr />
+<h3 id="codebook">codebook</h3>
+<p><code>codebook</code> permite ver información adicional sobre una variable, en este caso se puede usar para ver los valores de las etiquetas y el código numérico, así como las frecuencias y las observaciones perdidas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">codebook</span> educacion_cat
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">              type</span>:  numeric (long)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">             label</span>:  educacion
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">             range</span>:  [<span class="m">0</span>,<span class="m">9</span>]                        units:  <span class="m">1</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>     unique values:  <span class="m">8</span>                        missing .:  <span class="m">4</span>,<span class="m">839</span><span class="o">/</span><span class="m">22</span>,<span class="m">142</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        tabulation:  Freq.   Numeric  Label
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>                       <span class="m">599</span>         <span class="m">0</span>  Ninguno
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>                     <span class="m">1</span>,<span class="m">872</span>         <span class="m">1</span>  Primaria incompleta
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>                     <span class="m">4</span>,<span class="m">107</span>         <span class="m">2</span>  Primaria completa
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>                     <span class="m">3</span>,<span class="m">957</span>         <span class="m">3</span>  Secundaria incompleta
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>                     <span class="m">3</span>,<span class="m">306</span>         <span class="m">4</span>  Secundaria completa
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>                       <span class="m">979</span>         <span class="m">5</span>  Universitario sin título
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>                     <span class="m">2</span>,<span class="m">476</span>         <span class="m">6</span>  Universitario con título
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>                         <span class="m">7</span>         <span class="m">9</span>  No especificado
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>                     <span class="m">4</span>,<span class="m">839</span>         .  
+</code></pre></div>
+</details>
+<p>Ahora podríamos verificar la condición usando recode</p>
+<p><br></p>
+<hr />
+<h3 id="recode">recode</h3>
+<p><code>recode</code> nos permite recodificar los valores de una variable. Por ejemplo, para este caso podríamos decirle que los agrupe en 2 categorías según el nivel académico</p>
+<div class="highlight"><span class="filename">recode</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">*Es posible usar replace o generate</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">recode</span> (valor_viejo = valor_nuevo),<span class="k"> gen</span>(nueva_variable)
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">*(4/6=0) significa reemplace todos los valores del 4 al 6 por un 0</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">recode</span> educacion_cat (<span class="m">0</span><span class="o">/</span><span class="m">3</span>=<span class="m">0</span>) (<span class="m">4</span><span class="o">/</span><span class="m">6</span>=<span class="m">1</span>),<span class="k"> gen</span>(bachillerato)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">replace</span> bachillerato=.<span class="k"> if</span> bachillerato<span class="o">==</span><span class="m">9</span>
+</code></pre></div>
+<p>Ahora podemos calcular el salario neto promedio
+<div class="highlight"><span class="filename">Promedios</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">*Bachillerato o mas</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">mean if</span> bachillerato<span class="o">==</span><span class="m">1</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">*Menos de bachillerato</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">mean if</span> bachillerato<span class="o">==</span><span class="m">0</span>
+</code></pre></div></p>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    .<span class="k"> mean</span> salario_neto<span class="k"> if</span> bachillerato<span class="o">==</span><span class="m">1</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    Mean estimation                   Number of obs   =      <span class="m">2</span>,<span class="m">866</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="o">--------------------------------------------------------------</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>                |       Mean   Std. Err.     [<span class="m">95</span>% Conf. Interval]
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="o">-------------+------------------------------------------------</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    salario_neto |   <span class="m">555876.2</span>   <span class="m">6915.001</span>      <span class="m">542317.3</span>    <span class="m">569435.1</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="o">--------------------------------------------------------------</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    . <span class="o">*</span>Menos<span class="k"> de</span> bachillerato
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    .<span class="k"> mean</span> salario_neto<span class="k"> if</span> bachillerato<span class="o">==</span><span class="m">0</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    Mean estimation                   Number of obs   =      <span class="m">2</span>,<span class="m">537</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="o">--------------------------------------------------------------</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>                |       Mean   Std. Err.     [<span class="m">95</span>% Conf. Interval]
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    <span class="o">-------------+------------------------------------------------</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>    salario_neto |   <span class="m">300454.8</span>   <span class="m">2684.664</span>      <span class="m">295190.4</span>    <span class="m">305719.1</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    <span class="o">--------------------------------------------------------------</span>
+</code></pre></div>
+</details>
+<p><br></p>
+<h2 id="tablas">Tablas</h2>
+<p>Llegados a este punto ya estamos familiarizados con el uso de STATA, por lo que podemos enfocarnos en analizar los datos que tenemos usando tablas y gráficos.</p>
+<hr />
+<h3 id="tab">tab</h3>
+<p><code>tab</code> es el comando que se usa para generar la mayoría de tablas en STATA</p>
+<p>Su syntaxis es muy simple, solamente se debe de especificar las variables que queremos incluir en la tabla</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">tab</span> educacion_cat 
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>            Nivel educativo |      Freq.     Percent        Cum.
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">-------------------------+-----------------------------------</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>                Ninguno |        <span class="m">599</span>        <span class="m">3.46</span>        <span class="m">3.46</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    Primaria incompleta |       <span class="m">1</span>,<span class="m">872</span>       <span class="m">10.82</span>       <span class="m">14.28</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    Primaria completa |         <span class="m">4</span>,<span class="m">107</span>       <span class="m">23.74</span>       <span class="m">38.02</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Secundaria incompleta |         <span class="m">3</span>,<span class="m">957</span>       <span class="m">22.87</span>       <span class="m">60.89</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    Secundaria completa |       <span class="m">3</span>,<span class="m">306</span>       <span class="m">19.11</span>       <span class="m">79.99</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>Universitario sin título |        <span class="m">979</span>        <span class="m">5.66</span>       <span class="m">85.65</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>Universitario con título |      <span class="m">2</span>,<span class="m">476</span>       <span class="m">14.31</span>       <span class="m">99.96</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        No especificado |          <span class="m">7</span>        <span class="m">0.04</span>      <span class="m">100.00</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="o">-------------------------+-----------------------------------</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>                Total |         <span class="m">17</span>,<span class="m">303</span>      <span class="m">100.00</span>
+</code></pre></div>
+</details>
+<p>Como podemos ver en el resultado, STATA despliega una tabla que nos indica la cantidad de observaciones, el valor en términos porcentuales y una columna adicional llamada cum, que se refiere al porcentage acumulado.</p>
+<p>Esto nos permite de forma muy clara y concisa responder preguntas como por ejemplo, ¿Qué porcentage de la población cuenta con un grado equivalente o superior a secundaria completa?</p>
+<p><br></p>
+<hr />
+<h3 id="tab-con-2-variables">tab con 2 variables</h3>
+<p>También es posible agregar 2 variables a la tabla, en este caso la primera será la variable que sale en las filas y la segunda la que sale en las columnas</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">tab</span> educacion_cat sexo
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>                        |         Sexo
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>        Nivel educativo |    Hombre      Mujer |     Total
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>                Ninguno |       <span class="m">290</span>        <span class="m">309</span> |       <span class="m">599</span> 
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    Primaria incompleta |       <span class="m">860</span>      <span class="m">1</span>,<span class="m">012</span> |     <span class="m">1</span>,<span class="m">872</span> 
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        Primaria completa |     <span class="m">1</span>,<span class="m">981</span>      <span class="m">2</span>,<span class="m">126</span> |     <span class="m">4</span>,<span class="m">107</span> 
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    Secundaria incompleta |     <span class="m">1</span>,<span class="m">956</span>      <span class="m">2</span>,<span class="m">001</span> |     <span class="m">3</span>,<span class="m">957</span> 
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    Secundaria completa |     <span class="m">1</span>,<span class="m">497</span>      <span class="m">1</span>,<span class="m">809</span> |     <span class="m">3</span>,<span class="m">306</span> 
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    Universitario sin tít |       <span class="m">446</span>        <span class="m">533</span> |       <span class="m">979</span> 
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    Universitario con tít |       <span class="m">978</span>      <span class="m">1</span>,<span class="m">498</span> |     <span class="m">2</span>,<span class="m">476</span> 
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        No especificado |         <span class="m">4</span>          <span class="m">3</span> |         <span class="m">7</span> 
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>                    Total |     <span class="m">8</span>,<span class="m">012</span>      <span class="m">9</span>,<span class="m">291</span> |    <span class="m">17</span>,<span class="m">303</span> 
+</code></pre></div>
+</details>
+<p>Sin embargo, esta tabla no muestra las distribuciones en porcentaje, por lo que no es posible comparar la educación entre grupos. Para evitar esto se pueden usar las opciones <code>col</code> o <code>row</code>, para resumir los valores como porcentaje de la columna o fila.</p>
+<div class="highlight"><span class="filename">Porcentajes</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">tab</span> educacion_cat sexo, col
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>                            |         Sexo
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    Nivel educativo |    Hombre      Mujer |     Total
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>            Ninguno |       <span class="m">290</span>        <span class="m">309</span> |       <span class="m">599</span> 
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>                    |      <span class="m">3.62</span>       <span class="m">3.33</span> |      <span class="m">3.46</span> 
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>Primaria incompleta |       <span class="m">860</span>      <span class="m">1</span>,<span class="m">012</span> |     <span class="m">1</span>,<span class="m">872</span> 
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>                    |     <span class="m">10.73</span>      <span class="m">10.89</span> |     <span class="m">10.82</span> 
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    Primaria completa |     <span class="m">1</span>,<span class="m">981</span>      <span class="m">2</span>,<span class="m">126</span> |     <span class="m">4</span>,<span class="m">107</span> 
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>                    |     <span class="m">24.73</span>      <span class="m">22.88</span> |     <span class="m">23.74</span> 
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>Secundaria incompleta |     <span class="m">1</span>,<span class="m">956</span>      <span class="m">2</span>,<span class="m">001</span> |     <span class="m">3</span>,<span class="m">957</span> 
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>                    |     <span class="m">24.41</span>      <span class="m">21.54</span> |     <span class="m">22.87</span> 
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>Secundaria completa |     <span class="m">1</span>,<span class="m">497</span>      <span class="m">1</span>,<span class="m">809</span> |     <span class="m">3</span>,<span class="m">306</span> 
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>                    |     <span class="m">18.68</span>      <span class="m">19.47</span> |     <span class="m">19.11</span> 
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>Universitario sin tít |       <span class="m">446</span>        <span class="m">533</span> |       <span class="m">979</span> 
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>                    |      <span class="m">5.57</span>       <span class="m">5.74</span> |      <span class="m">5.66</span> 
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>Universitario con tít |       <span class="m">978</span>      <span class="m">1</span>,<span class="m">498</span> |     <span class="m">2</span>,<span class="m">476</span> 
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>                    |     <span class="m">12.21</span>      <span class="m">16.12</span> |     <span class="m">14.31</span> 
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>    No especificado |         <span class="m">4</span>          <span class="m">3</span> |         <span class="m">7</span> 
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>                    |      <span class="m">0.05</span>       <span class="m">0.03</span> |      <span class="m">0.04</span> 
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="o">----------------------+----------------------+----------</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>                Total |     <span class="m">8</span>,<span class="m">012</span>      <span class="m">9</span>,<span class="m">291</span> |    <span class="m">17</span>,<span class="m">303</span> 
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>                    |    <span class="m">100.00</span>     <span class="m">100.00</span> |    <span class="m">100.00</span> 
+</code></pre></div>
+</details>
+<p><br></p>
+<hr />
+<h3 id="sum">sum</h3>
+<p>Las tablas son muy útiles para analizar variables categóricas, pero qué pasa cuando variable es numérica, como por ejemplo el salario neto. En este caso es conveniente hacer un resumen estadístico de la variable</p>
+<p><code>sum</code> nos permite de manera rápida, calcular estadísticas acerca de la variable que nos interesa</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">sum</span> salario_neto
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>    Variable |        Obs        Mean    Std. Dev.       Min        Max
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="o">-------------+---------------------------------------------------------</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    salario_neto |      <span class="m">5</span>,<span class="m">407</span>    <span class="m">435961.7</span>    <span class="m">312211.8</span>      <span class="m">10000</span>    <span class="m">3900000</span>
+</code></pre></div>
+</details>
+<p>En el resultado se puede observar la cantidad de observaciones, el valor promedio, la desviación estándar y los valores máximos y mínimos.</p>
+<p><br></p>
+<h2 id="graficos">Gráficos</h2>
+<p>Por último, podemos ver ahora 2 tipos de gráficos que son útiles para analizar la distribución de variables numéricas</p>
+<hr />
+<h3 id="histograma">histograma</h3>
+<p>Un histograma es un gráfico muy común para analizar distribuciones de datos, permite ver por ejemplo la distribución de los ingresos de las personas, los años de escolaridad y otras variables similares</p>
+<div class="highlight"><span class="filename">Histograma</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">*Frequency es necesario para que muestre frecuencias</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">hist</span> amos_educacion, frequency
+</code></pre></div>
+<p>Usando <code>by</code> también se tiene la posibilidad de crear gráficos dividiendo por alguna otra característica, por ejemplo un histograma de los años de escolaridad por zona</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">hist</span> amos_educacion,<span class="k"> by</span>(zona) frequency
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="grafico-de-cajas">gráfico de cajas</h3>
+<p>Por último se tiene el gráfico de cajas, que nos indica la distribución en cuartiles de alguna variable</p>
+<p>En este caso se realiza un gráfico de cajas para analizar la variable salario neto</p>
+<p><div class="highlight"><span class="filename">Grafico de cajas y bigotes</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">graph</span> box salario_neto
+</code></pre></div>
+En principio el gráfico se ve mal, ya que hay valores muy altos de salario que afectan la escala, si fuera posible excluir estos valores entonces se puede usar la opción <code>nooutsides</code></p>
+<div class="highlight"><span class="filename">Grafico de cajas y bigotes</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">graph</span> box salario_neto, nooutsides
+</code></pre></div>
+<p>De igual manera se puede dividir el análisis por grupos. Se puede por ejemplo comparar la distribución del salario de las personas según si tienen o no título de bachillerato</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">graph</span> box salario_neto, over(bachillerato)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
