@@ -20,7 +20,7 @@
     
     
       
-        <title>Semana 5 - Datos Económicos UCR</title>
+        <title>Semana 4 - Datos Económicos UCR</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semana 5
+              Semana 4
             
           </span>
         </div>
@@ -406,7 +406,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 5
+    Semana 4
     
   </span>
   
@@ -419,7 +419,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 5
+    Semana 4
     
   </span>
   
@@ -962,9 +962,9 @@
 
 <h1 id="interfaz-de-stata-e-importacion-de-bases-de-datos">Interfaz de STATA e importación de bases de datos</h1>
 <p>Para empezar a trabajar con una base de datos lo primero es abrir un archivo de tipo do, donde vamos a escribir los comandos para que decirle a STATA lo que queremos que haga.</p>
-<p><img alt="imagen" src="../../images/semana5/abrir_dofile.png" /></p>
+<p><img alt="imagen" src="../../images/semana4/abrir_dofile.png" /></p>
 <p>Esto va a abrir un cuaderno que se vería así.</p>
-<p><img alt="imagen" src="../../images/semana5/dofile.png" /></p>
+<p><img alt="imagen" src="../../images/semana4/dofile.png" /></p>
 <p>Una vez abierto el dofile podemos empezar a trabajar con <code>STATA</code></p>
 <hr />
 <h2 id="comandos">Comandos</h2>
@@ -975,7 +975,7 @@
 <p>Por ejemplo</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">use</span> <span class="s">&quot;C:\Users\dmoya\Downloads\enaho_2023.dta&quot;</span>
 </code></pre></div>
-<p>Una vez que escribe esto en el dofile puede correr el comando usando <code>ctrl+D</code> o dando click en el siguiente ícono <img alt="image" src="../../images/semana5/run_cmd.png" /></p>
+<p>Una vez que escribe esto en el dofile puede correr el comando usando <code>ctrl+D</code> o dando click en el siguiente ícono <img alt="image" src="../../images/semana4/run_cmd.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Posibles errores</p>
 <ul>
@@ -985,7 +985,7 @@
 </div>
 <p>Luego de ejecutar un comando, <code>STATA</code> nos indica el resultado en la consola que es la pantalla grande que se puede ver al inicio. Aquí nos muestra que ejeutó el comando  <code>use</code>.</p>
 <p>Puede también verificar que cargó los datos revisando la pestaña de variables que se encuentra a la derecha
-<img alt="image" src="../../images/semana5/variables.png" /></p>
+<img alt="image" src="../../images/semana4/variables.png" /></p>
 <p>Seguro se puede estar preguntando ¿dónde veo los datos?</p>
 <hr />
 <h3 id="browse">browse</h3>
@@ -996,9 +996,9 @@
 </code></pre></div></p>
 <p><strong>Opción 2:</strong> </p>
 <p>De click en el siguiente ícono
-<img alt="image" src="../../images/semana5/browse.png" /></p>
+<img alt="image" src="../../images/semana4/browse.png" /></p>
 <p>En cualquiera de los dos casos se abrirá una pestaña adicional con los datos en formato de tabla
-<img alt="image" src="../../images/semana5/explorador.png" /></p>
+<img alt="image" src="../../images/semana4/explorador.png" /></p>
 <p>Aquí puede ver las diferentes variables con las que contamos, en nuestro caso estamos trabajando con la encuesta de hogares, por lo que cada fila representa una persona y sus características, por ejemplo: la región, la zona, el sexo, su nivel de instrucción, etc.</p>
 <hr />
 <h3 id="ds">ds</h3>
@@ -1006,7 +1006,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">*El resultado se muestra en la consola</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">ds</span>
 </code></pre></div>
-<img alt="image" src="../../images/semana5/ds.png" /></p>
+<img alt="image" src="../../images/semana4/ds.png" /></p>
 <hr />
 <h3 id="order">order</h3>
 <p>A veces trabajamos con bases de datos muy grandes. Una encuesta de hogares puede tener hasta más de <strong>500</strong> columnas. ¿Qué pasaría por ejemplo, si variable de interés está en la columna 400?</p>
@@ -1101,11 +1101,11 @@ En nuestro caso, si quisieramos colocar el nivel de instrucción al inicio se ve
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">*Calcular promedio del salario</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">mean</span> spmb
 </code></pre></div>
-<img alt="image" src="../../images/semana5/mean_error.png" /></p>
+<img alt="image" src="../../images/semana4/mean_error.png" /></p>
 <p>Cuando <code>STATA</code> nos muestra un texto rojo significa que no pudo ejecutar el comando debido a un error.</p>
 <p>En este caso intentamos calcular el promedio del salario bruto de las personas, pero el obtenemos un error que dice spmb es una variable de tipo <code>string</code>. </p>
 <p>Es decir, a pesar de que podemos ver números en la columna <code>STATA</code> tiene la variable guardada como texto, por lo que no puede calcular el promedio.</p>
-<p><img alt="image" src="../../images/semana5/type.png" /></p>
+<p><img alt="image" src="../../images/semana4/type.png" /></p>
 <p>Podemos observar el tipo de variable almacenado en <code>STATA</code> en la pestaña de propiedades abajo a la derecha y veremos que el tipo dice <code>str</code> o sea <code>string</code></p>
 <hr />
 <div class="admonition info">
@@ -1178,8 +1178,8 @@ En nuestro caso, si quisieramos colocar el nivel de instrucción al inicio se ve
 </tr>
 </tbody>
 </table>
-<p><a href="https://www.dropbox.com/scl/fi/ffrmdpy8s07daqr8txikp/lab5.do?rlkey=4m09zaboqerq6fad4clbiivha&amp;st=721eh8iv&amp;dl=0">Descargar do-file</a></p>
-<p><a href="https://www.dropbox.com/scl/fi/53ntkhz7yzg8fc86snmso/practica.do?rlkey=gkg5c7r8o35npm0jz7oflnhcy&amp;st=y6i21bxx&amp;dl=0">Descargar práctica</a></p>
+<p><a href="https://drive.google.com/uc?export=download&amp;id=18dkkMCN221ZttAd8MFKTLt21W04wfvEV">Descargar do-file</a></p>
+<p><a href="https://drive.google.com/uc?export=download&amp;id=1E1jPcJLIlELhU5MjBwpaJ9NNro9dV4Tc">Descargar práctica</a></p>
 
 
 
