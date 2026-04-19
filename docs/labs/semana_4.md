@@ -1,13 +1,16 @@
 
 # Interfaz de STATA e importación de bases de datos
 
+[Descargar base de datos](https://drive.google.com/uc?export=download&id=1yuzcJjZu4sSOg1hKjlPhDHXrUZUqfpEF)
+
+
 Para empezar a trabajar con una base de datos lo primero es abrir un archivo de tipo do, donde vamos a escribir los comandos para que decirle a STATA lo que queremos que haga.
 
-![imagen](../images/semana5/abrir_dofile.png)
+![imagen](../images/semana4/abrir_dofile.png)
 
 Esto va a abrir un cuaderno que se vería así.
 
-![imagen](../images/semana5/dofile.png)
+![imagen](../images/semana4/dofile.png)
 
 Una vez abierto el dofile podemos empezar a trabajar con `STATA`
 
@@ -29,7 +32,7 @@ Por ejemplo
 use "C:\Users\dmoya\Downloads\enaho_2023.dta"
 ```
 
-Una vez que escribe esto en el dofile puede correr el comando usando `ctrl+D` o dando click en el siguiente ícono ![image](../images/semana5/run_cmd.png)
+Una vez que escribe esto en el dofile puede correr el comando usando `ctrl+D` o dando click en el siguiente ícono ![image](../images/semana4/run_cmd.png)
 
 
 !!! warning "Posibles errores"
@@ -39,7 +42,7 @@ Una vez que escribe esto en el dofile puede correr el comando usando `ctrl+D` o 
 Luego de ejecutar un comando, `STATA` nos indica el resultado en la consola que es la pantalla grande que se puede ver al inicio. Aquí nos muestra que ejeutó el comando  `use`.
 
 Puede también verificar que cargó los datos revisando la pestaña de variables que se encuentra a la derecha
-![image](../images/semana5/variables.png)
+![image](../images/semana4/variables.png)
 
 Seguro se puede estar preguntando ¿dónde veo los datos?
 
@@ -57,10 +60,10 @@ browse
 **Opción 2:** 
 
 De click en el siguiente ícono
-![image](../images/semana5/browse.png)
+![image](../images/semana4/browse.png)
 
 En cualquiera de los dos casos se abrirá una pestaña adicional con los datos en formato de tabla
-![image](../images/semana5/explorador.png)
+![image](../images/semana4/explorador.png)
 
 Aquí puede ver las diferentes variables con las que contamos, en nuestro caso estamos trabajando con la encuesta de hogares, por lo que cada fila representa una persona y sus características, por ejemplo: la región, la zona, el sexo, su nivel de instrucción, etc.
 
@@ -72,7 +75,7 @@ Si quisieramos simplemente ver las variables que tenemos disponibles podemos usa
 *El resultado se muestra en la consola
 ds
 ```
-![image](../images/semana5/ds.png)
+![image](../images/semana4/ds.png)
 
 
 ---
@@ -162,7 +165,7 @@ Un tema muy importante a tener en cuenta es que existen diferentes tipos de vari
 *Calcular promedio del salario
 mean spmb
 ```
-![image](../images/semana5/mean_error.png)
+![image](../images/semana4/mean_error.png)
 
 Cuando `STATA` nos muestra un texto rojo significa que no pudo ejecutar el comando debido a un error.
 
@@ -170,7 +173,7 @@ En este caso intentamos calcular el promedio del salario bruto de las personas, 
 
 Es decir, a pesar de que podemos ver números en la columna `STATA` tiene la variable guardada como texto, por lo que no puede calcular el promedio.
 
-![image](../images/semana5/type.png)
+![image](../images/semana4/type.png)
 
 Podemos observar el tipo de variable almacenado en `STATA` en la pestaña de propiedades abajo a la derecha y veremos que el tipo dice `str` o sea `string`
 
@@ -194,18 +197,20 @@ Ejemplo
 ```stata
 destring spmb, replace
 mean spmb
-
-*Resultado
-*Mean estimation                   Number of obs   =      9,562
-
---------------------------------------------------------------
-             |       Mean   Std. Err.     [95% Conf. Interval]
--------------+------------------------------------------------
-        spmb |   536077.6   5269.032      525749.2      546406
---------------------------------------------------------------
-
-*Ya no obtenemos errores!
 ```
+??? success "Resultado"
+    ```stata
+    Mean estimation                   Number of obs   =      9,562
+
+    --------------------------------------------------------------
+                |       Mean   Std. Err.     [95% Conf. Interval]
+    -------------+------------------------------------------------
+            spmb |   536077.6   5269.032      525749.2      546406
+    --------------------------------------------------------------
+
+    *Ya no obtenemos errores!
+
+    ```
 
 ---
 
@@ -232,7 +237,8 @@ gsort spmb
 | `destring`    	| Convertir string a número     	|
 | `gsort`       	| Ordenar la base de datos      	|
 
-[Descargar do-file](https://www.dropbox.com/scl/fi/ffrmdpy8s07daqr8txikp/lab5.do?rlkey=4m09zaboqerq6fad4clbiivha&st=721eh8iv&dl=0)
+[Descargar do-file](https://drive.google.com/uc?export=download&id=18dkkMCN221ZttAd8MFKTLt21W04wfvEV)
 
-[Descargar práctica](https://www.dropbox.com/scl/fi/53ntkhz7yzg8fc86snmso/practica.do?rlkey=gkg5c7r8o35npm0jz7oflnhcy&st=y6i21bxx&dl=0)
+[Descargar práctica](https://drive.google.com/uc?export=download&id=1E1jPcJLIlELhU5MjBwpaJ9NNro9dV4Tc)
+
 

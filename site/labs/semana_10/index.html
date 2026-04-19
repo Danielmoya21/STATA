@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../semana_10/">
+        <link rel="prev" href="../semana_8/">
       
       
-        <link rel="next" href="../../practicas/stata1/">
+        <link rel="next" href="../semana_13/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Semana 13 - Datos Económicos UCR</title>
+        <title>Semana 10 - Datos Económicos UCR</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#medidas-de-concentracion" class="md-skip">
+        <a href="#manejo-de-bases-de-datos" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semana 13
+              Semana 10
             
           </span>
         </div>
@@ -481,29 +481,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../semana_10/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Semana 10
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -521,7 +498,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 13
+    Semana 10
     
   </span>
   
@@ -534,7 +511,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 13
+    Semana 10
     
   </span>
   
@@ -557,18 +534,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#repaso-sobre-percentiles" class="md-nav__link">
+  <a href="#append" class="md-nav__link">
     <span class="md-ellipsis">
-      Repaso sobre percentiles
+      Append
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#coeficiente-de-gini-y-curva-de-lorenz" class="md-nav__link">
+  <a href="#merge" class="md-nav__link">
     <span class="md-ellipsis">
-      Coeficiente de Gini y Curva de Lorenz
+      Merge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collapse
     </span>
   </a>
   
@@ -578,6 +564,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 13
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -759,18 +768,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#repaso-sobre-percentiles" class="md-nav__link">
+  <a href="#append" class="md-nav__link">
     <span class="md-ellipsis">
-      Repaso sobre percentiles
+      Append
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#coeficiente-de-gini-y-curva-de-lorenz" class="md-nav__link">
+  <a href="#merge" class="md-nav__link">
     <span class="md-ellipsis">
-      Coeficiente de Gini y Curva de Lorenz
+      Merge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collapse
     </span>
   </a>
   
@@ -792,161 +810,87 @@
 
 
 
-<!-- # Factor de Expansión
-
-Vamos a empezar cargando la base de datos 
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">use</span> <span class="s">&quot;la ubicacion del archivo en la computadora&quot;</span>,<span class="k"> clear</span>
-</code></pre></div>
-
-La base tiene ~30,000 mil observaciones, sin embargo, cuando el INEC publica resultados de la situación socioeconómica del país presenta datos extrapolados para todo el país. 
-
-!!! warning "Pregunta"
-    ¿Cómo es entonces que puede hacer estadísticas sobre 5 millones de personas con una encuesta de 30 mil observaciones?
-
-Si utilizamos el comando tab, podemos hacer una tabla descriptiva de algunas variables. Realicemos una tabla para el nivel de pobreza según la región.
-
-<div class="highlight"><span class="filename">Tab normal</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">tab</span> REGION np
-</code></pre></div>
-Como podrá observar la tabla nos muestra el total de personas según su condicón de pobreza y región de planificación, en total hay  30,514 observaciones. Si queremos saber a cuanto equivalen estos datos con respecto al total de la población, debemos usar el **factor de ponderación o expansión**
-
-!!! tip "Factor de ponderación"
-    El factor de ponderación se utiliza para ajustar la representación en
-    una encuesta. Nos dice cuánto representa una observación en términos poblacionales.
-
-Por ejemplo, si en el país hay más mujeres que hombres, pero en la encuesta se entrevistan igual número de mujeres que de hombres, entonces el factor de expansión da mayor peso a las mujeres.
-
-En Stata simplemente añadimos la opción **[w=variable]** aquí w significa weight, es decir el peso de cada observación y la variable que tiene el peso de cada observación es "FACTOR"
-
-<div class="highlight"><span class="filename">Tab con pesos</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">tab</span> REGION np [w=FACTOR]
-</code></pre></div>
-Como puede ver la tabla ahora muestra un total de 5,257,304 de observaciones. Esto quiere decir que estamos expandiendo los datos para todo el país.
-
-!!! note "Diferentes tipos de pesos"
-
-    **Frecuency weights (fweight):**  Se le indica a Stata que una sola
-    línea representa observaciones de múltiples personas
-
-    **Analytic weights (aweight)**: Se usan cuando cada observación
-    es una media calculada a partir de una muestra de tamaño n.
-
-    **Sample weights (pweight)**: También conocidas como
-    ponderaciones de probabilidad, son adecuadas cuando se
-    realiza un muestreo aleatorio sin reemplazo.
-
-Podríamos también usarlo con variables que hayamos creado nosotros.
-
-<div class="highlight"><span class="filename">Creamos variable de pobreza</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">*Ponemos personas pobres en categoría 1 y no pobres en categoría 0</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">recode</span> np (<span class="m">2</span>=<span class="m">1</span>) (<span class="m">3</span>=<span class="m">0</span>),<span class="k"> gen</span>(pobre_dicotomica)
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">*Creamos la tabla</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">tab</span> pobre_dicotomica [w=FACTOR]
-</code></pre></div>
-
----
-
-# Combinar bases de datos
-
-
-Algo muy común que sucede cuando se está realizando una investigación es querer analizar un problema a lo largo del tiempo, sin embargo, todas las bases de datos con las que hemos trabajado hasta el momento incluyen solo las observaciones para un año en específico.
-
-Suponga que usted quiere ver la evolución de la pobreza a lo largo de los últimos 3 años. Para poder realizar esto deberíamos analizar las bases de datos del 2023, 2024 y 2025. Sería más práctico combinar las bases de datos, que analizar una base a la vez.
-
-!!! danger "Comando append"
-    El comando **append** nos permite juntar bases de datos de manera vertical
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">append</span> using <span class="s">&quot;base_2.dta&quot;</span>
-</code></pre></div>
-
-Utilizando append podemos juntar las bases de datos de ambos años y trabajar con una sola base de datos.
-
-Hasta ahora todo funciona bien, pero si observa la base de datos, notará que no puede diferenciar cuales observaciones pertenecen a cada año. 
-
-!!! tip "Generar identificadores"
-    Podemos evitar este problema generando un **identificador** con la opción gen(variable)
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">append</span> using <span class="s">&quot;base_2.dta&quot;</span>,<span class="k"> gen</span>(anno)
-</code></pre></div>
-
-Una vez hecho esto podríamos analizar por ejemplo como cambió el porcentaje de personas según su condición de pobreza.
-
-Podemos hacerlo mediante un gráfico de barras.
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">*Note que para un gráfico de porcentaje no es necesario poner una variable antes de la coma</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">*con asyvars le decimos que a STATA que use diferentes colores para la variable que pusimos en el primer over()</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">*En este caso el anno</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">graph</span> bar (percent) [w=FACTOR], over(anno) over(np) asyvars
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">graph</span> box Escolari [w=FACTOR]<span class="k"> if</span> Escolari<span class="o">!=</span><span class="m">99</span>, over(anno)
-</code></pre></div>
-
-!!! danger "Nota"
-    Note el uso del factor de expansión para hacer el gráfico
-
-!!! warning "Otras manipulaciones"
-    - **Merge**: Une bases de datos con una columna en común de forma horizontal
-    - **Collapse**: Resume datos. Permite reducir la base de datos a estadísticas descriptivas
-
-    *Estas no son cubiertas en el curso 
-
---- -->
-
-<h1 id="medidas-de-concentracion">Medidas de concentración</h1>
+<h1 id="manejo-de-bases-de-datos">Manejo de Bases de Datos</h1>
+<p>A veces al trabajar con bases de datos ocurre que necesitamos combinar los datos de 2 o más bases.</p>
+<p>Piense por ejemplo en cómo se puede evaluar el nivel de pobreza del país.</p>
+<p>Se tiene claro que podemos recurrir a los datos de la ENAHO para estudiar los indicadores de pobreza; sin embargo, hay un tema importante. ¿Cómo se sabe si el país está mejorando o empeorando en cuanto a la reducción de la pobreza?</p>
+<details class="success">
+<summary>Gráfico</summary>
+<p><img alt="pobreza" src="../../images/semana10/pobreza.png" /></p>
+</details>
+<p>El gráfico anterior no nos dice mucho acerca de la situación del país si no somos capaces de contrastarlo con datos de años anteriores.</p>
+<p>Dado que la ENAHO del 2024 solo tiene datos del año 2024, si queremos compararlo con otros años debemos de agregar los datos de la ENAHO 2023 por ejemplo.</p>
 <p><br></p>
 <hr />
-<h2 id="repaso-sobre-percentiles">Repaso sobre percentiles</h2>
-<p>A veces es muy útil dividir a la población en percentiles, sobretodo cuando se estudia un tema como la desigualdad</p>
-<p>Para esto trabajabamos con 2 comandos principales en Stata</p>
-<div class="admonition danger">
-<p class="admonition-title">xtile</p>
-<p>Genera una variable categórica que indica el percentil al que pertenece la observación.</p>
-<p>Syntaxis
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">xtile</span> nueva_variable = expresión, nquantiles(#)
-</code></pre></div></p>
+<h3 id="append">Append</h3>
+<p><code>Append</code> nos permite pegar bases de datos de manera vertical.</p>
+<p><img alt="append" src="../../images/semana10/append.png" /></p>
+<p>Note en la imagen, que tenemos 2 bases de datos diferentes, una naranja y otra azul.</p>
+<p>Al usar append, lo que hacemos es unirlas poniendo una bajo otra, para que así queden los datos en una única base.</p>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado</p>
+<p>Note que las variables de las 2 bases de datos son las mismas (A y B). Si trataramos de unir bases de datos con variables diferentes, solo se van a unir aquellas que estén en ambas bases de datos. El resto quedarán como observaciones perdidas (.)</p>
 </div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">xtile</span> quintil = ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span>, nquantiles(<span class="m">5</span>)
+<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">append</span> using <span class="s">&quot;base de datos&quot;</span>
 </code></pre></div>
-Esto genera una variable con números del 1 al 5 indicando el quintil de ingreso al que pertenece la persona</p>
-<p>Ahora podemos hacer análisis por quintiles, por ejemplo ver los años de escolaridad promedio:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">tab</span> quintil,<span class="k"> sum</span>(Escolari)<span class="k"> mean</span>
-</code></pre></div></p>
-<div class="admonition danger">
-<p class="admonition-title">pctile</p>
-<p>Nos indica el valor de los percentiles</p>
-<p>Syntaxis
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">pctile</span> nueva_variable = expresión, nquantiles(#)
-</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Tip</p>
+<p>También es posible crear una nueva variable que sirva como identificador sobre cuáles observaciones eran de la base original y cuales observaciones son de la base que se añadió</p>
 </div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">pctile</span> valores = ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span>, nquantiles(<span class="m">5</span>)
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">tab</span> valores
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">append</span> using <span class="s">&quot;enaho_2023.dta&quot;</span>,<span class="k"> gen</span>(anno)
 </code></pre></div>
-Esto nos muestra una tabla con el valor del ingreso que corresponde al quintil 1, 2, 3 y 4</p>
+<p>Por defecto a la variable anno se le añaden valores de 0 para las observaciones originales y 1 para las que fueron añadidas. Pero podemos ajustarla para que coincida con los años.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">recode</span> anno (<span class="m">0</span>=<span class="m">2024</span>) (<span class="m">1</span>=<span class="m">2023</span>)
+</code></pre></div>
+<p>Ahora si podemos visualizar la variación de un año a otro.</p>
+<div class="highlight"><span class="filename">Gráfico</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">graph</span> bar (percent), asyvars over(anno) over(np) ylabel(<span class="m">0</span>(<span class="m">10</span>)<span class="m">100</span>) <span class="cs">///</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ytitle(<span class="s">&quot;%&quot;</span>) title(<span class="s">&quot;Incidencia de la Pobreza, Costa Rica, 2024&quot;</span>, place(<span class="s">&quot;left&quot;</span>)) <span class="cs">///</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>bar(<span class="m">1</span>, color(red)) bar(<span class="m">2</span>, color(blue))
+</code></pre></div>
+<details class="success">
+<summary>Gráfico</summary>
+<p><img alt="pobreza" src="../../images/semana10/pobreza_annos.png" /></p>
+</details>
 <p><br></p>
 <hr />
-<h2 id="coeficiente-de-gini-y-curva-de-lorenz">Coeficiente de Gini y Curva de Lorenz</h2>
-<p>En esta sección vamos a trabajar con el uso de paquetes externos que nos permiten computar la Curva de Lorenz y el Coeficiente de Gini</p>
-<div class="admonition tip">
-<p class="admonition-title">Paquetes de terceros</p>
-<p>Recuerde que para instalar paquetes de terceros usamos <code>ssc install [nombre del paquete]</code></p>
-</div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">ssc</span> install glcurve
+<h3 id="merge">Merge</h3>
+<p>A veces también es conveniente añadir datos que corresponden a una base de datos diferente. Por ejemplo, piense que nos interesa ver el crecimiento del salario promedio de las personas.</p>
+<p>Podríamos simplemente calcular el salario promedio por año. Sin embargo, aún cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.</p>
+<p>Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente, ya que la publica el Banco Central.</p>
+<p><a href="https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/969?Cuadro=51">Puede descargar los datos del IPC dando click al enlace</a></p>
+<p>Una vez que descarga la base, nuestro objetivo es añadir el valor del IPC del año correspondiente.</p>
+<p><code>merge</code> nos permite unir dos bases de datos que tienen una columna en común.</p>
+<p><img alt="pobreza" src="../../images/semana10/merge.png" /></p>
+<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">merge</span> <span class="m">1</span>:<span class="m">1</span> variable_en_común using <span class="s">&quot;base_de_datos_a_unir&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">*merge m:1 ...</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">*merge 1:m ...</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">*merge m:m ...</span>
 </code></pre></div>
-<p>Si no estamos seguros de como instalar un paquete podemos escribir <code>help [nombre del paquete]</code>, por ejemplo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">help</span> ginidesc
+<p>El segmento 1:1 le indica a STATA que cada identificador tiene una única observación.</p>
+<p>En nuestro caso la base de datos de la ENAHO tiene múltiples observaciones para un mismo año, por lo que no podemos usar 1:1.</p>
+<p>Debemos decirle a STATA que la base de datos 1 tiene múltiples observaciones para cada año. Esto lo hacemos poniendo una m de many.</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">merge m</span>:<span class="m">1</span> anno using ipc<span class="m">.</span>dta
 </code></pre></div>
-<p>Este comando abrirá un menú con opciones de paquetes a descargar. Si el paquete ya está instalado, abre el menú de ayuda.</p>
-<p>Una vez instalados los comandos podemos calcular el índice de Gini con el comando <code>ginidesc</code></p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ginidesc ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span> <span class="o">&amp;</span> anno<span class="o">==</span><span class="m">2024</span>
+<p><br></p>
+<hr />
+<h3 id="collapse">Collapse</h3>
+<p>Finalmente se quiere realizar algún tipo de estadística que nos permita resumir y visualizar los datos.</p>
+<p>En nuestro caso, ya que estamos trabajando con salarios reales y nominales, podemos realizar un gráfico de líneas que compare la evolución de los salarios en el tiempo.</p>
+<p><code>collapse</code> nos resumir los datos que tenemos en la base de acuerdo a las características de interés.</p>
+<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">collapse</span> (estadistico) variable (estadistico_2) variable_2,<span class="k"> by</span>(variable_agrupar) 
 </code></pre></div>
-<code>ginidesc</code> muestra una tabla en la consola con el coeficiente de Gini. Además, muestra la desigualdad que puede ser atribuida a desigualdad entre grupos y dentro de los grupos </p>
-<p>Como ejemplo, podemos ver el coeficiente de Gini por región y analizar cuánto de la desigualdad se debe a brechas entre grupos</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ginidesc ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span> <span class="o">&amp;</span> anno<span class="o">==</span><span class="m">2024</span>,<span class="k"> by</span>(REGION)
+<p>Por ejemplo, si queremos resumir los ingresos salariales brutos según su promedio anual, utilizamos el siguiente código.</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">collapse</span> (mean) ipsbt ipsbt_real,<span class="k"> by</span>(anno) 
 </code></pre></div>
-<p>También podemos computar la Curva de Lorenz con <code>glcurve</code>, para tener una representación visual de la desigualdad del país</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>glcurve ipcn<span class="k"> if</span> ipcn<span class="o">&gt;</span><span class="m">0</span> <span class="o">&amp;</span> anno<span class="o">==</span><span class="m">2024</span>, <span class="cs">///</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>lorenz title(<span class="s">&quot;Curva de Lorenz Costa Rica 2024&quot;</span>) <span class="cs">///</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>scheme(plotplain) <span class="cs">///</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>ytitle(<span class="s">&quot;Porcentaje acumulado de ingreso&quot;</span>) <span class="cs">///</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>xtitle(<span class="s">&quot;Porcentaje acumulado de personas&quot;</span>)<span class="k"> plot</span>(function equality=x, color(blue))
+<div class="highlight"><span class="filename">Gráfico</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">graph twoway</span> connected ipsbt ipsbt_real anno, xlabel(<span class="m">2014</span>(<span class="m">2</span>)<span class="m">2025</span>) <span class="cs">///</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>legend(label(<span class="m">1</span> <span class="s">&quot;Salario nominal&quot;</span>)<span class="k"> label</span>(<span class="m">2</span> <span class="s">&quot;Salario real&quot;</span>)) <span class="cs">///</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>xtitle(<span class="s">&quot;Año&quot;</span>) ytitle(<span class="s">&quot;Colones&quot;</span>) <span class="cs">///</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>title(<span class="s">&quot;Salario nominal y real, Costa Rica, 2015-2024&quot;</span>, place(<span class="s">&quot;left&quot;</span>) span)
 </code></pre></div>
-<p><a href="dofiles/dofile_semana13.do" download>Puede descargar el dofile aquí</a></p>
+<details class="success">
+<summary>Gráfico</summary>
+<p><img alt="salario" src="../../images/semana10/salarios.png" /></p>
+</details>
 
 
 

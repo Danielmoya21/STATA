@@ -2,12 +2,16 @@ site_name: Datos Económicos UCR
 nav:
   - Introducción: index.md
   - Laboratorios:
-    - "Semana 5": labs/semana_5.md
-    - "Semana 13": labs/semana_13.md
+      - "Semana 4": labs/semana_4.md
+      - "Semana 6": labs/semana_6.md
+      - "Semana 7": labs/semana_7.md
+      - "Semana 8": labs/semana_8.md
+      - "Semana 10": labs/semana_10.md
+      - "Semana 13": labs/semana_13.md
   - Practicas:
-    - "Quiz Stata 1": practicas/stata1.md
+      - "Quiz Stata 1": practicas/stata1.md
   - Videos:
-    - "Videos": videos.md
+      - "Videos": videos.md
 theme:
   name: material
   palette:
@@ -46,4 +50,3 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/add_stylesheet.css
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css

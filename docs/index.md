@@ -42,7 +42,7 @@ En este ejemplo se muestra una de las principales ventajas de usar STATA
 !!! danger "Generar estadísticas descriptivas"
     Usando solo un comando podemos generar una tabla que nos resuma el precio promedio de las casas según el estado al que pertenecen, así como la desviación estándar y el número de observaciones.
 
-![img](images/index/tabstat.png){text-align=center}
+![img](images/index/tabstat.png)
 
 Como puede ver hay 48 342 observaciones, un número muy grande y posiblemente más difícil de realizar en Excel
 
@@ -51,9 +51,9 @@ Como puede ver hay 48 342 observaciones, un número muy grande y posiblemente m�
 !!! danger "Estadísticos más complejos"
     STATA cuenta con comandos predeterminados donde nos podemos ahorrar mucho trabajo a la hora de analizar datos.
 
-![img](images/index/summarize.png){align=center}
+![img](images/index/summarize.png)
 
-En este ejemplo se muestra como con un comando obtenemos una tabla con diferentes medidas de dispersión, como el promedio, la varianza, asimetría, entre otros.
+En este ejemplo se muestra como con un comando obtenemos una tabla con diferentes medidas de dispersión, como el promedio, la varianza, asimetría, entre otros.****
 
 ---
 !!! danger "Gráficos"
@@ -89,4 +89,4 @@ La siguiente imagen muestra la consola de STATA, la cual se aparece al abrir el 
 ![img](images/index/dofile.png)
 
 
-[Dirigirse a los laboratorios](labs/semana_5.md)
+[Dirigirse a los laboratorios](labs/semana_4.md)

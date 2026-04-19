@@ -1,5 +1,5 @@
 
-# Factor de Expansión
+<!-- # Factor de Expansión
 
 Vamos a empezar cargando la base de datos 
 
@@ -103,9 +103,13 @@ graph box Escolari [w=FACTOR] if Escolari!=99, over(anno)
    
     *Estas no son cubiertas en el curso 
 
----
+--- -->
 
 # Medidas de concentración
+
+<br>
+
+---
 
 ## Repaso sobre percentiles
 
@@ -143,6 +147,9 @@ tab valores
 ```
 Esto nos muestra una tabla con el valor del ingreso que corresponde al quintil 1, 2, 3 y 4
 
+<br>
+
+---
 
 ## Coeficiente de Gini y Curva de Lorenz
 
@@ -170,7 +177,7 @@ ginidesc ipcn if ipcn>0 & anno==2024
 ```
 ```ginidesc``` muestra una tabla en la consola con el coeficiente de Gini. Además, muestra la desigualdad que puede ser atribuida a desigualdad entre grupos y dentro de los grupos 
 
-Como ejemplo podemos ver el coeficiente de Gini por region y analizar cuánto de la desigualdad se debe a brechas entre grupos
+Como ejemplo, podemos ver el coeficiente de Gini por región y analizar cuánto de la desigualdad se debe a brechas entre grupos
 
 ```stata
 ginidesc ipcn if ipcn>0 & anno==2024, by(REGION)
