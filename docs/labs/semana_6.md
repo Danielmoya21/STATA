@@ -1,269 +1,205 @@
 
-## Comandos
+
+
+# Creación de Gráficos en Stata
+[Descargar base de datos](https://drive.google.com/uc?export=download&id=1G76O7UJfJXsOFmjiZjy5dvqG_fakiTQ2)
 
 ---
-### cd
+En este laboratorio cubriremos la realización de gráficos en Stata.
 
-!!! info "Directorio de trabajo"
-    Cuando trabajamos con programas como STATA es importante tener en cuenta que existe algo llamado directorio de trabajo. Puede pensar en el directorio de trabajo como la carpeta en la que STATA busca y guarda archivos en la computadora.
+En general, la syntaxis para crear gráficos es la siguiente
 
-
-Es importante tener esto en cuenta porque cuando guardemos archivos, por ejemplo un gráfico, STATA lo guarda en nuestro directorio de trabajo actual.
-
-!!! info "cd"
-    `cd` signficia change directory y nos permite cambiar la carpeta en la que estamos trabajando.
-
-    `pwd` nos permite ver la carpeta que estamos usando 
-
-
-```stata title="change directory"
-
-*Primero podemos ver la carpeta inicial
-pwd
-
-*Luego podemos cambiarla usando cd
-cd "C:\Users\dmoya\Downloads\Lab6"
-
-pwd
-
-
+```stata title="Syntaxis"
+graph [tipo de grafico], opciones
 ```
-??? success "Resultado" 
-    ```stata
-    
-    *Primera carpeta
-    C:\Users\dmoya\AppData\Local\PowerToys
 
-    *Luego de cambiarla
-    C:\Users\dmoya\Downloads\Lab6
-    ```
+Sin embargo hay que adaptarla para los diferentes tipos de gráficos que hay. En este laboratorio, veremos como hacer gráficos de barras, gráficos de barras apiladas y gráficos de líneas.
 
 <br>
 
 ---
-
-### import excel
-
-En la clase pasada vimos que se podían cargar archivos de STATA usando `use`
-
-Podemos tratar de abrir la base de datos para este laboratorio
-
-```stata
-use "base_lab6.xlsx"
+### Gráficos de barras 
+Para realizar un gráfico de barras lo hacemos de la siguiente forma:
+```stata title="Syntaxis"
+graph bar (funcion) variable, opciones
 ```
 
-Pero esto nos da el siguiente error
+En este caso indicamos primero el tipo de gráfico usando `bar`. Además, cuando realizamos gráficos de barras tenemos que indicarle a Stata qué queremos que nos muestren las barras, indicándolo donde dice `(función)` y para esto tenemos varias opciones
 
-??? failure "Resultado"
-    ```stata
+!!! info "Posibles estadísticas" 
+
+    - [x] mean - promedio
+    - [x] count - recuento
+    - [x] percent - porcentaje
+    - [x] max - máximo
     
-    "file base_lab6.xlsx not Stata format"
-    ```
+    Y muchas otras opciones que se pueden revisar en el menú de ayuda usando `help graph bar`
 
-Esto ocurre porque el formato del archivo es de `xlsx` o sea formato Excel, pero `use` sirve para cargar solo archivos de STATA.
+<br>
 
-Para cargar archivos en otros formatos hay que usar el comando `import` y especificar el tipo de archivo.
+#### Ejemplo
+Imagine que nos interesa conocer el salario promedio de las personas costarricenses según el sexo hombre o mujer.
 
-```stata title="import excel"
-import excel "base_lab6.xlsx", firstrow
+En este caso, la variable que vamos a usar es `spmb` (Salario principal monetario bruto) y la función sería `mean` que corresponde al promedio
+```stata title="Ejemplo - salario promedio"
+graph bar (mean) spmb, over(A4)
 ```
+??? info "Resultado"
+    ![grafico](../images/semana6/grafico_basico_sin_grupos.png)
 
-La opción `firstrow` le indica a STATA que la primera fila del archivo tiene los nombres de las variables
+Como puede ver el gráfico nos muestra una única barra que representa el salario promedio de las personas costarricenses. Sin embargo, no es de mucha utilidad usar un gráfico de barras para ver un único número, sino que nos interesa **comparar varias categorías**.
 
 <br>
 
 ---
+#### Agregar categorías
+Podríamos entonces usar el gráfico de barras para comparar el salario promedio entre hombres y mujeres. Esto implica que debemos agrupar los datos por sexo.
 
-### save
+Para lograr esto, vamos a hacer uso de las opciones, en particular de la opción `over`
 
-Otra utilidad que tenemos es que podemos guardar la base de datos en formato `STATA` o `.dta`. Para esto usamos `save`.
+!!! danger "Over"
+    Over permite agrupar los datos según categorías
 
-```stata title="save"
-save base_lab6
+```stata title="Grafico de barras con categorías"
+graph bar (mean) spmb, over(A4) // Salario promedio agrupando por sexo
 ```
 
-Llegados a este punto podemos analizar la base de datos
-
+![grafico](../images/semana6/grafico_basico.png)
 
 <br>
 
 ---
+#### Gráficos con leyenda
+Suponga que ahora nos interesa visualizar la cantidad de personas ocupadas según su condición laboral, la cual puede ser (ocupada, desempleada o fuera de la fuerza de trabajo)
 
-### labels
+En este caso vamos a usar un gráfico de barras __horizontales__, por lo que usamos `hbar` y la función `count` para contar el total de personas según su condición laboral.
 
-Lo primero que podemos observar es la variable idioma. Esta indica si la persona habla o no otro idioma; sin embargo, tiene valores numéricos de 0 y 1, por lo que no es claro a qué se refiere cada uno.
+```stata title="Gráfico de barras horizontales"
+graph hbar (count), over(A4) over(CondAct) // grafico de barras
+// horizontales sin leyenda
+```
+??? info "Resultado"
+    ![grafico](../images/semana6/grafico_leyenda_0.png)
 
+Al observar el gráfico, note que se visualizaría mejor usando colores diferentes según sexo en lugar de tener más barras. Para esto agregamos la opción `asyvars` al final.
 
-!!! info "labels"
-    En este caso sería muy útil indicar que 1 signfica "sí" y 0 significa "no". 
-    
-    Para esto nos sirven las etiquetas o `labels`
+!!! danger "asyvars"
+    La opción asyvars nos permite usar como leyenda la variable en el primer over() en este caso A4
 
-#### label define
+```stata title="Gráfico con leyenda"
+graph hbar (count), over(A4) over(CondAct) asyvars // asyvars 
+// hace que el gráfico separe la variable A4 (sexo) por color
+```
 
-Para crear una etiqueta usamos la siguiente syintaxis
+![grafico](../images/semana6/grafico_leyenda.png)
+
+Finalmente, note que el gráfico que tenemos está incompleto, pues le faltan varias partes como:
+
+- Título
+- Títulos de eje
+- Número de gráfico
+- Fuente 
+
+Cada parte del gráfico la podemos agregar con las siguientes opciones
+
+| Parte | Opción de Stata |
+|:------:|:----------:|
+| __Título__ | `title("Aqui va el título")` |
+| __Títulos de eje__ | `xtitle("Titulo eje x")` <br> `ytitle("Titulo eje y")` |
+|__Leyenda__| `legend(label(1 "Hombre") label(2 "Mujer"))` |
+| __Fuente__ | `note("Fuente:...")` |
+
+```stata title="Gráfico con todos sus elementos"
+graph hbar (count), over(A4) over(CondAct) asyvars ////
+title("Grafico 1. Personas según condición de actividad económica, por sexo, Costa Rica, 2025", size(medium) span) ///
+ytitle("Total de personas") ///
+note("Fuente: Enaho 2025", span) ///
+legend(label(1 "Hombre") label(2 "Mujer"))
+```
+
+![grafico](../images/semana6/grafico_completo.png)
+
+---
+
+### Gráficos de barras apiladas 100%
+
+Un gráfico de barras apiladas se genera igual que un gráfico de
+barras añadiendo la opción `stack`.
+
+#### Con valores absolutos
+
+Por ejemplo, suponga que queremos generar un gráfico de barras apiladas que muestre el estado de la vivienda según el quintil de ingreso
+
+```stata title="Gráfico de barras apiladas"
+graph bar (count), over(EFI) over(Q_IPCN) asyvars stack
+```
+![grafico](../images/semana6/barras_apiladas.png)
+
+#### Con porcentajes
+Si queremos mostrar las barras como porcentaje, simplemente añadimos la opción `percentage`
+
+```stata title="Gráfico de barras apiladas - porcentaje"
+graph bar (count), over(EFI) over(Q_IPCN) asyvars stack percentage ///
+blabel(bar, size(small) position(center) format(%2.1f) suffix("%") color(white)) /// // blabel permite añadir los porcentajes a cada barra 
+title("Grafico 2. Estado de la vivienda según quintil de ingreso, Costa Rica, 2025", size(medium) span place(left)) ///
+ytitle("Porcentaje") xtitle("Quintil de ingreso") ///
+note("Fuente: Enaho 2025", span)
+```
+![grafico](../images/semana6/barras_apiladas_porcentaje.png)
+
+---
+
+### Gráficos de líneas
+
+Para este ejemplo vamos a tomar los datos de número de casos positivos de COVID durante la pandemia
+
+[Descargar archivo](https://drive.google.com/uc?export=download&id=1uECW4mhivb36s3SZa_vDTDEknQYKeBTK)
+
+El archivo cuenta con la fecha y el número de casos positivos acumulado. Este es un caso ideal para usar un gráfico de líneas, ya que tenemos una serie de tiempo.
+
+Para realizar gráficos de líneas en Stata usamos la siguiente syntaxis
 
 ```stata title="syntaxis"
-label define nombre numero1 "valor1" numero2 "valor2" ...
+graph twoway line variable fecha, opciones
 ```
 
-```stata title="Ejemplo"
-label define label_idioma 0 "No" 1 "Sí"
+En nuestro caso, el ejemplo quedaría de la siguiente forma
+
+```stata title="Gráfico de líneas"
+graph twoway line positivos fecha
 ```
 
-!!! tip
-    Puede pensar en las etiquetas como un diccionario que me dice la definición de lo que significa cada número.
+![grafico](../images/semana6/grafico_lineas.png)
 
-Luego de ejectuar el comando puede revisar la base de datos, pero verá que aún tenemos solo los valores 0 y 1.
+El gráfico nos muestra un rápido crecimiento en la cantidad de casos positivos de COVID durante los años de la pandemia
 
-!!! warning "aplicar etiquetas"
-    `label define` solo define una etiqueta, pero en ningún momento la aplicamos a alguna variable.
+!!! warning "Escala semilogarítmica"
+    Si quisiéramos determinar el ritmo al que crecían los contagios (si era creciente, decreciente o se mantenía constante), entonces podemos usar un gráfico con escala `semi-logarítmica`
 
-#### label values
+Para hacer un gráfico con escala semi-logarítmica, simplemente usamos la opción `yscale(log)`
 
-Para aplicar una etiqueta se usa `label values` 
+```stata
+graph twoway line positivos fecha, title("Escala Logarítmica") yscale(log)
+```
+![grafico](../images/semana6/semi-logaritmica.png)
 
-```stata title="label values"
-label values nombre_variable nombre_etiqueta
+
+Finalmente podemos combinar gráficos usando graph combine
+
+```stata
+*Guardar grafico de lineas
+graph twoway line positivos fecha, title("Escala Aritmética") ///
+xlabel(#6, angle(45)) saving(aritmetico, replace)
+
+*Guardar grafico de lineas con escala logaritmica
+graph twoway line positivos fecha, title("Escala Logarítmica") yscale(log) 
+xlabel(#6, angle(45)) saving(logaritmico, replace)
+
+*Combinar ambos graficos y ver ritmo de crecimiento
+graph combine aritmetico.gph logaritmico.gph
+graph export "combinado.png"
 ```
 
-```stata title="Ejemplo"
-label values idioma label_idioma
-*Ahora sí aplicó las etiquetas
-```
+![grafico](../images/semana6/combinado.png)
 
-<br>
-
-#### label var
-
-Otra opción útil es añadir etiquetas al nombre de la variable. Esto nos da una breve descripción adicional de la información que contiene una variable.
-
-
-Por ejemplo, si queremos aplicar la etiqueta a la variable idioma, podemos hacer lo siguiente.
-```stata title="label var"
-label var idioma "Indica si la persona es bilingüe"
-```
-
-La etiqueta la podemos ver en el explorador de variables.
-
-![image](../images/semana6/label_var.png)
-
-<br>
-
----
-
-### generate
-
-En la mayoría de casos, cuando estámos realizando una investigación es muy común tener que crear variables adicionales.
-
-Imagine por ejemplo, que estámos interesados en comparar el desempleo entre dos grupos, jóvenes y personas no jóvenes.
-
-Tenemos disponible la variable edad, pero nos sería más útil tener una variable que indique si la persona es jóven o no.
-
-!!! info "Tip"
-    Podemos entonces crear una variable nueva que cumpla esta función
-
-En STATA esto se logra usando `generate`. La syntaxis de generate es la siguiente:
-
-```stata title="generate"
-gen nombre_variable = algun_valor
-```
-
-```stata title="Ejemplo"
-gen x=1
-*Genera una nueva columna x con el número 1 para todas las filas
-```
-
-Este ejemplo es muy simple, pero en nuestro caso necesitamos algo más elaborado, por ejemplo, verificar la edad de la persona.
-Vamos a considerar jóven a aquellos con 25 años o menos.
-
-!!! info "Operadores lógicos"
-    Para lograr esto tenemos que usar operadores lógicos. En seguida se muestran los operadores lógicos y su uso
-
-
-| **Operador** 	|             **Significado**             	|             **Ejemplos**               |
-|:------------:	|:---------------------------------------:	|:---------------------------------------:	
-|      ==      	|          Verifica una igualdad          	| gen x=1 if edad==25                    |
-|       &      	| Verifica que 2 condiciones sean ciertas 	| gen x=1 if (edad==25) & (idioma==1)    |
-|      !=      	|               Distinto de               	| gen x=1 if idioma!=1                   |
-|       <      	|                Menor que                	| gen x=1 if edad < 25                   |
-|      <=      	|              Menor o igual              	| gen x=1 if edad <= 25                  |
-|       >      	|                Mayor que                	| gen x=1 if edad > 25                   |
-|      >=      	|              Mayor o igual              	| gen x=1 if edad >= 25                  |
-
-
-En nuestro caso nos sirve usar la condición de menor o igual que
-
-!!! warning "destring"
-    Antes hay que hacer un `destring` a edad, pero edad contiene valores no numéricos.
-
-    En este caso debemos usar la opción force para ignorar los casos donde no hay números
-
-    ```stata
-    destring edad, replace force
-    ```
-
-```stata title="generate"
-gen joven=1 if edad<=25
-```
-
-!!! warning "cuidado"
-    A este punto logramos crear la variable, pero nos falta indicar el valor cuando la persona es menor que 25
-
-    Podríamos intentar usar gen, pero obtendremos un error porque no se puede crear una variable que ya existe
-
-<br>
-
----
-### replace
-
-En este caso lo que tenemos que hacer es reemplazar el valor de la variable, para esto usamos `replace`
-
-`replace` nos permite reemplazar valores para variables que ya existen. Su syntaxis es la siguiente:
-
-```stata title="replace"
-replace nombre_variable = valor if condición
-```
-
-```stata title="Ejemplo"
-*Remplzar valores con 0 cuando no es menor que 25
-replace joven=0 if edad>25
-```
-
-<br>
-
----
-### rename
-`rename` permite cambiar el nombre de una variable
-
-La syntaxis es la siguiente:
-
-```stata title="rename"
-rename variable nuevo_nombre
-```
-
-```stata title="Ejemplo"
-rename joven joven_etiqueta
-```
-
-<br>
-
----
-### drop
-`drop` sirve para eliminar alguna variable que no nos interesa mantener en la base de datos
-
-```stata title="drop"
-drop cuestionario
-```
-
-<br>
-
----
-### keep
-`keep` es útil cuando se quiere mantener solo algunas variables necesarias y eliminar el resto
-
-```stata title="keep"
-keep sexo edad idioma joven_etiqueta condact
-```
-
-
+¿Qué puede concluir acerca de la tasa de crecimiento de casos positivos?

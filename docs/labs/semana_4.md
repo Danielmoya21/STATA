@@ -1,8 +1,10 @@
 
 # Interfaz de STATA e importación de bases de datos
 
+
 [Descargar base de datos](https://drive.google.com/uc?export=download&id=1yuzcJjZu4sSOg1hKjlPhDHXrUZUqfpEF)
 
+---
 
 Para empezar a trabajar con una base de datos lo primero es abrir un archivo de tipo do, donde vamos a escribir los comandos para que decirle a STATA lo que queremos que haga.
 

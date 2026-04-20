@@ -3,11 +3,12 @@ nav:
   - Introducción: index.md
   - Laboratorios:
       - "Semana 4": labs/semana_4.md
+      - "Semana 5": labs/semana_5.md
       - "Semana 6": labs/semana_6.md
-      - "Semana 7": labs/semana_7.md
-      - "Semana 8": labs/semana_8.md
-      - "Semana 10": labs/semana_10.md
-      - "Semana 13": labs/semana_13.md
+      # - "Semana 7": labs/semana_7.md
+      # - "Semana 8": labs/semana_8.md
+      # - "Semana 10": labs/semana_10.md
+      # - "Semana 13": labs/semana_13.md
   - Practicas:
       - "Quiz Stata 1": practicas/stata1.md
   - Videos:
