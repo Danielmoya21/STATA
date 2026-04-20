@@ -2,6 +2,9 @@
 
 
 # Creación de Gráficos en Stata
+
+[Descargar do-file](https://drive.google.com/uc?export=download&id=15ejBXVZSTEYmrNG33xVSelFSu2ljTrQf/view?usp=sharing)
+
 [Descargar base de datos](https://drive.google.com/uc?export=download&id=1G76O7UJfJXsOFmjiZjy5dvqG_fakiTQ2)
 
 ---

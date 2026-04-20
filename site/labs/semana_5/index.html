@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../semana_5/">
+        <link rel="prev" href="../semana_4/">
       
       
-        <link rel="next" href="../../practicas/stata1/">
+        <link rel="next" href="../semana_6/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Semana 6 - Datos Económicos UCR</title>
+        <title>Semana 5 - Datos Económicos UCR</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creacion-de-graficos-en-stata" class="md-skip">
+        <a href="#importar-archivos-y-uso-de-etiquetas" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Semana 6
+              Semana 5
             
           </span>
         </div>
@@ -412,29 +412,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../semana_5/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Semana 5
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -452,7 +429,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 6
+    Semana 5
     
   </span>
   
@@ -465,7 +442,7 @@
   
   
   <span class="md-ellipsis">
-    Semana 6
+    Semana 5
     
   </span>
   
@@ -488,37 +465,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#graficos-de-barras" class="md-nav__link">
+  <a href="#comandos" class="md-nav__link">
     <span class="md-ellipsis">
-      Gráficos de barras
+      Comandos
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Gráficos de barras">
+    <nav class="md-nav" aria-label="Comandos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#cd" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo
+      cd
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#agregar-categorias" class="md-nav__link">
+  <a href="#import-excel" class="md-nav__link">
     <span class="md-ellipsis">
-      Agregar categorías
+      import excel
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#graficos-con-leyenda" class="md-nav__link">
+  <a href="#save" class="md-nav__link">
     <span class="md-ellipsis">
-      Gráficos con leyenda
+      save
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      labels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="labels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label-define" class="md-nav__link">
+    <span class="md-ellipsis">
+      label define
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      label values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      label var
     </span>
   </a>
   
@@ -528,30 +542,47 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#graficos-de-barras-apiladas-100" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gráficos de barras apiladas 100%
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gráficos de barras apiladas 100%">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#con-valores-absolutos" class="md-nav__link">
+  <a href="#generate" class="md-nav__link">
     <span class="md-ellipsis">
-      Con valores absolutos
+      generate
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#con-porcentajes" class="md-nav__link">
+  <a href="#replace" class="md-nav__link">
     <span class="md-ellipsis">
-      Con porcentajes
+      replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      rename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      drop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keep" class="md-nav__link">
+    <span class="md-ellipsis">
+      keep
     </span>
   </a>
   
@@ -559,15 +590,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graficos-de-lineas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gráficos de líneas
-    </span>
-  </a>
   
 </li>
       
@@ -575,6 +597,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 6
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -756,37 +801,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#graficos-de-barras" class="md-nav__link">
+  <a href="#comandos" class="md-nav__link">
     <span class="md-ellipsis">
-      Gráficos de barras
+      Comandos
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Gráficos de barras">
+    <nav class="md-nav" aria-label="Comandos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#cd" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo
+      cd
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#agregar-categorias" class="md-nav__link">
+  <a href="#import-excel" class="md-nav__link">
     <span class="md-ellipsis">
-      Agregar categorías
+      import excel
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#graficos-con-leyenda" class="md-nav__link">
+  <a href="#save" class="md-nav__link">
     <span class="md-ellipsis">
-      Gráficos con leyenda
+      save
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      labels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="labels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label-define" class="md-nav__link">
+    <span class="md-ellipsis">
+      label define
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      label values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      label var
     </span>
   </a>
   
@@ -796,30 +878,47 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#graficos-de-barras-apiladas-100" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gráficos de barras apiladas 100%
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Gráficos de barras apiladas 100%">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#con-valores-absolutos" class="md-nav__link">
+  <a href="#generate" class="md-nav__link">
     <span class="md-ellipsis">
-      Con valores absolutos
+      generate
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#con-porcentajes" class="md-nav__link">
+  <a href="#replace" class="md-nav__link">
     <span class="md-ellipsis">
-      Con porcentajes
+      replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      rename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      drop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keep" class="md-nav__link">
+    <span class="md-ellipsis">
+      keep
     </span>
   </a>
   
@@ -827,15 +926,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graficos-de-lineas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gráficos de líneas
-    </span>
-  </a>
   
 </li>
       
@@ -855,170 +945,216 @@
 
 
 
-<h1 id="creacion-de-graficos-en-stata">Creación de Gráficos en Stata</h1>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1G76O7UJfJXsOFmjiZjy5dvqG_fakiTQ2">Descargar base de datos</a></p>
+<h1 id="importar-archivos-y-uso-de-etiquetas">Importar archivos y uso de etiquetas</h1>
+<p><a href="https://docs.google.com/spreadsheets/d/1B6kI-b67q4y1GmED0XWXCtNYc6K0ug0p/export?format=xlsx">Descargar archivo de excel</a></p>
+<h2 id="comandos">Comandos</h2>
 <hr />
-<p>En este laboratorio cubriremos la realización de gráficos en Stata.</p>
-<p>En general, la syntaxis para crear gráficos es la siguiente</p>
-<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">graph</span> [tipo<span class="k"> de</span> grafico], opciones
-</code></pre></div>
-<p>Sin embargo hay que adaptarla para los diferentes tipos de gráficos que hay. En este laboratorio, veremos como hacer gráficos de barras, gráficos de barras apiladas y gráficos de líneas.</p>
-<p><br></p>
-<hr />
-<h3 id="graficos-de-barras">Gráficos de barras</h3>
-<p>Para realizar un gráfico de barras lo hacemos de la siguiente forma:
-<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">graph</span> bar (funcion) variable, opciones
-</code></pre></div></p>
-<p>En este caso indicamos primero el tipo de gráfico usando <code>bar</code>. Además, cuando realizamos gráficos de barras tenemos que indicarle a Stata qué queremos que nos muestren las barras, indicándolo donde dice <code>(función)</code> y para esto tenemos varias opciones</p>
+<h3 id="cd">cd</h3>
 <div class="admonition info">
-<p class="admonition-title">Posibles estadísticas</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> mean - promedio</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> count - recuento</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> percent - porcentaje</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> max - máximo</li>
-</ul>
-<p>Y muchas otras opciones que se pueden revisar en el menú de ayuda usando <code>help graph bar</code></p>
+<p class="admonition-title">Directorio de trabajo</p>
+<p>Cuando trabajamos con programas como STATA es importante tener en cuenta que existe algo llamado directorio de trabajo. Puede pensar en el directorio de trabajo como la carpeta en la que STATA busca y guarda archivos en la computadora.</p>
 </div>
+<p>Es importante tener esto en cuenta porque cuando guardemos archivos, por ejemplo un gráfico, STATA lo guarda en nuestro directorio de trabajo actual.</p>
+<div class="admonition info">
+<p class="admonition-title">cd</p>
+<p><code>cd</code> signficia change directory y nos permite cambiar la carpeta en la que estamos trabajando.</p>
+<p><code>pwd</code> nos permite ver la carpeta que estamos usando </p>
+</div>
+<div class="highlight"><span class="filename">change directory</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">*Primero podemos ver la carpeta inicial</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">pwd</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">*Luego podemos cambiarla usando cd</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">cd</span> <span class="s">&quot;C:\Users\dmoya\Downloads\lab5&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">pwd</span>
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">*Primera carpeta</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>C:\Users\dmoya\AppData\Local\PowerToys
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">*Luego de cambiarla</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>C:\Users\dmoya\Downloads\lab5
+</code></pre></div>
+</details>
 <p><br></p>
-<h4 id="ejemplo">Ejemplo</h4>
-<p>Imagine que nos interesa conocer el salario promedio de las personas costarricenses según el sexo hombre o mujer.</p>
-<p>En este caso, la variable que vamos a usar es <code>spmb</code> (Salario principal monetario bruto) y la función sería <code>mean</code> que corresponde al promedio
-<div class="highlight"><span class="filename">Ejemplo - salario promedio</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">graph</span> bar (mean) spmb, over(A4)
+<hr />
+<h3 id="import-excel">import excel</h3>
+<p>En la clase pasada vimos que se podían cargar archivos de STATA usando <code>use</code></p>
+<p>Podemos tratar de abrir la base de datos para este laboratorio</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">use</span> <span class="s">&quot;base_lab5.xlsx&quot;</span>
+</code></pre></div>
+<p>Pero esto nos da el siguiente error</p>
+<details class="failure">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s">&quot;file base_lab5.xlsx not Stata format&quot;</span>
+</code></pre></div>
+</details>
+<p>Esto ocurre porque el formato del archivo es de <code>xlsx</code> o sea formato Excel, pero <code>use</code> sirve para cargar solo archivos de STATA.</p>
+<p>Para cargar archivos en otros formatos hay que usar el comando <code>import</code> y especificar el tipo de archivo.</p>
+<div class="highlight"><span class="filename">import excel</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import excel <span class="s">&quot;base_lab5.xlsx&quot;</span>, firstrow
+</code></pre></div>
+<p>La opción <code>firstrow</code> le indica a STATA que la primera fila del archivo tiene los nombres de las variables</p>
+<p><br></p>
+<hr />
+<h3 id="save">save</h3>
+<p>Otra utilidad que tenemos es que podemos guardar la base de datos en formato <code>STATA</code> o <code>.dta</code>. Para esto usamos <code>save</code>.</p>
+<div class="highlight"><span class="filename">save</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">save</span> base_lab5
+</code></pre></div>
+<p>Llegados a este punto podemos analizar la base de datos</p>
+<p><br></p>
+<hr />
+<h3 id="labels">labels</h3>
+<p>Lo primero que podemos observar es la variable idioma. Esta indica si la persona habla o no otro idioma; sin embargo, tiene valores numéricos de 0 y 1, por lo que no es claro a qué se refiere cada uno.</p>
+<div class="admonition info">
+<p class="admonition-title">labels</p>
+<p>En este caso sería muy útil indicar que 1 signfica "sí" y 0 significa "no". </p>
+<p>Para esto nos sirven las etiquetas o <code>labels</code></p>
+</div>
+<h4 id="label-define">label define</h4>
+<p>Para crear una etiqueta usamos la siguiente syintaxis</p>
+<div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">label</span> define nombre numero1 <span class="s">&quot;valor1&quot;</span> numero2 <span class="s">&quot;valor2&quot;</span> ...
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">label</span> define label_idioma <span class="m">0</span> <span class="s">&quot;No&quot;</span> <span class="m">1</span> <span class="s">&quot;Sí&quot;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Puede pensar en las etiquetas como un diccionario que me dice la definición de lo que significa cada número.</p>
+</div>
+<p>Luego de ejectuar el comando puede revisar la base de datos, pero verá que aún tenemos solo los valores 0 y 1.</p>
+<div class="admonition warning">
+<p class="admonition-title">aplicar etiquetas</p>
+<p><code>label define</code> solo define una etiqueta, pero en ningún momento la aplicamos a alguna variable.</p>
+</div>
+<h4 id="label-values">label values</h4>
+<p>Para aplicar una etiqueta se usa <code>label values</code> </p>
+<div class="highlight"><span class="filename">label values</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">label</span> values nombre_variable nombre_etiqueta
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">label</span> values idioma label_idioma
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">*Ahora sí aplicó las etiquetas</span>
+</code></pre></div>
+<p><br></p>
+<h4 id="label-var">label var</h4>
+<p>Otra opción útil es añadir etiquetas al nombre de la variable. Esto nos da una breve descripción adicional de la información que contiene una variable.</p>
+<p>Por ejemplo, si queremos aplicar la etiqueta a la variable idioma, podemos hacer lo siguiente.
+<div class="highlight"><span class="filename">label var</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">label var</span> idioma <span class="s">&quot;Indica si la persona es bilingüe&quot;</span>
 </code></pre></div></p>
-<details class="info">
-<summary>Resultado</summary>
-<p><img alt="grafico" src="../../images/semana6/grafico_basico_sin_grupos.png" /></p>
-</details>
-<p>Como puede ver el gráfico nos muestra una única barra que representa el salario promedio de las personas costarricenses. Sin embargo, no es de mucha utilidad usar un gráfico de barras para ver un único número, sino que nos interesa <strong>comparar varias categorías</strong>.</p>
+<p>La etiqueta la podemos ver en el explorador de variables.</p>
+<p><img alt="image" src="../../images/semana5/label_var.png" /></p>
 <p><br></p>
 <hr />
-<h4 id="agregar-categorias">Agregar categorías</h4>
-<p>Podríamos entonces usar el gráfico de barras para comparar el salario promedio entre hombres y mujeres. Esto implica que debemos agrupar los datos por sexo.</p>
-<p>Para lograr esto, vamos a hacer uso de las opciones, en particular de la opción <code>over</code></p>
-<div class="admonition danger">
-<p class="admonition-title">Over</p>
-<p>Over permite agrupar los datos según categorías</p>
+<h3 id="generate">generate</h3>
+<p>En la mayoría de casos, cuando estámos realizando una investigación es muy común tener que crear variables adicionales.</p>
+<p>Imagine por ejemplo, que estámos interesados en comparar el desempleo entre dos grupos, jóvenes y personas no jóvenes.</p>
+<p>Tenemos disponible la variable edad, pero nos sería más útil tener una variable que indique si la persona es jóven o no.</p>
+<div class="admonition info">
+<p class="admonition-title">Tip</p>
+<p>Podemos entonces crear una variable nueva que cumpla esta función</p>
 </div>
-<div class="highlight"><span class="filename">Grafico de barras con categorías</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">graph</span> bar (mean) spmb, over(A4) <span class="c1">// Salario promedio agrupando por sexo</span>
+<p>En STATA esto se logra usando <code>generate</code>. La syntaxis de generate es la siguiente:</p>
+<div class="highlight"><span class="filename">generate</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">gen</span> nombre_variable = algun_valor
 </code></pre></div>
-<p><img alt="grafico" src="../../images/semana6/grafico_basico.png" /></p>
-<p><br></p>
-<hr />
-<h4 id="graficos-con-leyenda">Gráficos con leyenda</h4>
-<p>Suponga que ahora nos interesa visualizar la cantidad de personas ocupadas según su condición laboral, la cual puede ser (ocupada, desempleada o fuera de la fuerza de trabajo)</p>
-<p>En este caso vamos a usar un gráfico de barras <strong>horizontales</strong>, por lo que usamos <code>hbar</code> y la función <code>count</code> para contar el total de personas según su condición laboral.</p>
-<div class="highlight"><span class="filename">Gráfico de barras horizontales</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">graph</span> hbar (count), over(A4) over(CondAct) <span class="c1">// grafico de barras</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">// horizontales sin leyenda</span>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">gen</span> x=<span class="m">1</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1">*Genera una nueva columna x con el número 1 para todas las filas</span>
 </code></pre></div>
-<details class="info">
-<summary>Resultado</summary>
-<p><img alt="grafico" src="../../images/semana6/grafico_leyenda_0.png" /></p>
-</details>
-<p>Al observar el gráfico, note que se visualizaría mejor usando colores diferentes según sexo en lugar de tener más barras. Para esto agregamos la opción <code>asyvars</code> al final.</p>
-<div class="admonition danger">
-<p class="admonition-title">asyvars</p>
-<p>La opción asyvars nos permite usar como leyenda la variable en el primer over() en este caso A4</p>
+<p>Este ejemplo es muy simple, pero en nuestro caso necesitamos algo más elaborado, por ejemplo, verificar la edad de la persona.
+Vamos a considerar jóven a aquellos con 25 años o menos.</p>
+<div class="admonition info">
+<p class="admonition-title">Operadores lógicos</p>
+<p>Para lograr esto tenemos que usar operadores lógicos. En seguida se muestran los operadores lógicos y su uso</p>
 </div>
-<div class="highlight"><span class="filename">Gráfico con leyenda</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">graph</span> hbar (count), over(A4) over(CondAct) asyvars <span class="c1">// asyvars </span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// hace que el gráfico separe la variable A4 (sexo) por color</span>
-</code></pre></div>
-<p><img alt="grafico" src="../../images/semana6/grafico_leyenda.png" /></p>
-<p>Finalmente, note que el gráfico que tenemos está incompleto, pues le faltan varias partes como:</p>
-<ul>
-<li>Título</li>
-<li>Títulos de eje</li>
-<li>Número de gráfico</li>
-<li>Fuente </li>
-</ul>
-<p>Cada parte del gráfico la podemos agregar con las siguientes opciones</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Parte</th>
-<th style="text-align: center;">Opción de Stata</th>
+<th style="text-align: center;"><strong>Operador</strong></th>
+<th style="text-align: center;"><strong>Significado</strong></th>
+<th style="text-align: center;"><strong>Ejemplos</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>Título</strong></td>
-<td style="text-align: center;"><code>title("Aqui va el título")</code></td>
+<td style="text-align: center;">==</td>
+<td style="text-align: center;">Verifica una igualdad</td>
+<td style="text-align: center;">gen x=1 if edad==25</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Títulos de eje</strong></td>
-<td style="text-align: center;"><code>xtitle("Titulo eje x")</code> <br> <code>ytitle("Titulo eje y")</code></td>
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: center;">Verifica que 2 condiciones sean ciertas</td>
+<td style="text-align: center;">gen x=1 if (edad==25) &amp; (idioma==1)</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Leyenda</strong></td>
-<td style="text-align: center;"><code>legend(label(1 "Hombre") label(2 "Mujer"))</code></td>
+<td style="text-align: center;">!=</td>
+<td style="text-align: center;">Distinto de</td>
+<td style="text-align: center;">gen x=1 if idioma!=1</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Fuente</strong></td>
-<td style="text-align: center;"><code>note("Fuente:...")</code></td>
+<td style="text-align: center;">&lt;</td>
+<td style="text-align: center;">Menor que</td>
+<td style="text-align: center;">gen x=1 if edad &lt; 25</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt;=</td>
+<td style="text-align: center;">Menor o igual</td>
+<td style="text-align: center;">gen x=1 if edad &lt;= 25</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;</td>
+<td style="text-align: center;">Mayor que</td>
+<td style="text-align: center;">gen x=1 if edad &gt; 25</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;=</td>
+<td style="text-align: center;">Mayor o igual</td>
+<td style="text-align: center;">gen x=1 if edad &gt;= 25</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><span class="filename">Gráfico con todos sus elementos</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">graph</span> hbar (count), over(A4) over(CondAct) asyvars <span class="cs">////</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>title(<span class="s">&quot;Grafico 1. Personas según condición de actividad económica, por sexo, Costa Rica, 2025&quot;</span>, size(medium) span) <span class="cs">///</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>ytitle(<span class="s">&quot;Total de personas&quot;</span>) <span class="cs">///</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">note</span>(<span class="s">&quot;Fuente: Enaho 2025&quot;</span>, span) <span class="cs">///</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>legend(label(<span class="m">1</span> <span class="s">&quot;Hombre&quot;</span>)<span class="k"> label</span>(<span class="m">2</span> <span class="s">&quot;Mujer&quot;</span>))
-</code></pre></div>
-<p><img alt="grafico" src="../../images/semana6/grafico_completo.png" /></p>
-<hr />
-<h3 id="graficos-de-barras-apiladas-100">Gráficos de barras apiladas 100%</h3>
-<p>Un gráfico de barras apiladas se genera igual que un gráfico de
-barras añadiendo la opción <code>stack</code>.</p>
-<h4 id="con-valores-absolutos">Con valores absolutos</h4>
-<p>Por ejemplo, suponga que queremos generar un gráfico de barras apiladas que muestre el estado de la vivienda según el quintil de ingreso</p>
-<p><div class="highlight"><span class="filename">Gráfico de barras apiladas</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">graph</span> bar (count), over(EFI) over(Q_IPCN) asyvars<span class="k"> stack</span>
-</code></pre></div>
-<img alt="grafico" src="../../images/semana6/barras_apiladas.png" /></p>
-<h4 id="con-porcentajes">Con porcentajes</h4>
-<p>Si queremos mostrar las barras como porcentaje, simplemente añadimos la opción <code>percentage</code></p>
-<p><div class="highlight"><span class="filename">Gráfico de barras apiladas - porcentaje</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">graph</span> bar (count), over(EFI) over(Q_IPCN) asyvars<span class="k"> stack</span> percentage <span class="cs">///</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>blabel(bar, size(small) position(center)<span class="k"> format</span>(<span class="nx">%2.1f</span>) suffix(<span class="s">&quot;%&quot;</span>) color(white)) <span class="cs">/// </span><span class="c1">// blabel permite añadir los porcentajes a cada barra </span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>title(<span class="s">&quot;Grafico 2. Estado de la vivienda según quintil de ingreso, Costa Rica, 2025&quot;</span>, size(medium) span place(left)) <span class="cs">///</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>ytitle(<span class="s">&quot;Porcentaje&quot;</span>) xtitle(<span class="s">&quot;Quintil de ingreso&quot;</span>) <span class="cs">///</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">note</span>(<span class="s">&quot;Fuente: Enaho 2025&quot;</span>, span)
-</code></pre></div>
-<img alt="grafico" src="../../images/semana6/barras_apiladas_porcentaje.png" /></p>
-<hr />
-<h3 id="graficos-de-lineas">Gráficos de líneas</h3>
-<p>Para este ejemplo vamos a tomar los datos de número de casos positivos de COVID durante la pandemia</p>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1uECW4mhivb36s3SZa_vDTDEknQYKeBTK">Descargar archivo</a></p>
-<p>El archivo cuenta con la fecha y el número de casos positivos acumulado. Este es un caso ideal para usar un gráfico de líneas, ya que tenemos una serie de tiempo.</p>
-<p>Para realizar gráficos de líneas en Stata usamos la siguiente syntaxis</p>
-<div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">graph twoway line</span> variable fecha, opciones
-</code></pre></div>
-<p>En nuestro caso, el ejemplo quedaría de la siguiente forma</p>
-<div class="highlight"><span class="filename">Gráfico de líneas</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">graph twoway line</span> positivos fecha
-</code></pre></div>
-<p><img alt="grafico" src="../../images/semana6/grafico_lineas.png" /></p>
-<p>El gráfico nos muestra un rápido crecimiento en la cantidad de casos positivos de COVID durante los años de la pandemia</p>
+<p>En nuestro caso nos sirve usar la condición de menor o igual que</p>
 <div class="admonition warning">
-<p class="admonition-title">Escala semilogarítmica</p>
-<p>Si quisiéramos determinar el ritmo al que crecían los contagios (si era creciente, decreciente o se mantenía constante), entonces podemos usar un gráfico con escala <code>semi-logarítmica</code></p>
+<p class="admonition-title">destring</p>
+<p>Antes hay que hacer un <code>destring</code> a edad, pero edad contiene valores no numéricos.</p>
+<p>En este caso debemos usar la opción force para ignorar los casos donde no hay números</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">destring</span> edad,<span class="k"> replace</span> force
+</code></pre></div>
 </div>
-<p>Para hacer un gráfico con escala semi-logarítmica, simplemente usamos la opción <code>yscale(log)</code></p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">graph twoway line</span> positivos fecha, title(<span class="s">&quot;Escala Logarítmica&quot;</span>) yscale(log)
+<div class="highlight"><span class="filename">generate</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">gen</span> joven=<span class="m">1</span><span class="k"> if</span> edad<span class="o">&lt;=</span><span class="m">25</span>
 </code></pre></div>
-<img alt="grafico" src="../../images/semana6/semi-logaritmica.png" /></p>
-<p>Finalmente podemos combinar gráficos usando graph combine</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">*Guardar grafico de lineas</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">graph twoway line</span> positivos fecha, title(<span class="s">&quot;Escala Aritmética&quot;</span>) <span class="cs">///</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>xlabel(#<span class="m">6</span>, angle(<span class="m">45</span>)) saving(aritmetico,<span class="k"> replace</span>)
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">*Guardar grafico de lineas con escala logaritmica</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">graph twoway line</span> positivos fecha, title(<span class="s">&quot;Escala Logarítmica&quot;</span>) yscale(log) 
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>xlabel(#<span class="m">6</span>, angle(<span class="m">45</span>)) saving(logaritmico,<span class="k"> replace</span>)
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1">*Combinar ambos graficos y ver ritmo de crecimiento</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">graph</span> combine aritmetico<span class="m">.</span>gph logaritmico<span class="m">.</span>gph
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">graph</span> export <span class="s">&quot;combinado.png&quot;</span>
+<div class="admonition warning">
+<p class="admonition-title">cuidado</p>
+<p>A este punto logramos crear la variable, pero nos falta indicar el valor cuando la persona es menor que 25</p>
+<p>Podríamos intentar usar gen, pero obtendremos un error porque no se puede crear una variable que ya existe</p>
+</div>
+<p><br></p>
+<hr />
+<h3 id="replace">replace</h3>
+<p>En este caso lo que tenemos que hacer es reemplazar el valor de la variable, para esto usamos <code>replace</code></p>
+<p><code>replace</code> nos permite reemplazar valores para variables que ya existen. Su syntaxis es la siguiente:</p>
+<div class="highlight"><span class="filename">replace</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">replace</span> nombre_variable = valor<span class="k"> if</span> condición
 </code></pre></div>
-<p><img alt="grafico" src="../../images/semana6/combinado.png" /></p>
-<p>¿Qué puede concluir acerca de la tasa de crecimiento de casos positivos?</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">*Remplzar valores con 0 cuando no es menor que 25</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">replace</span> joven=<span class="m">0</span><span class="k"> if</span> edad<span class="o">&gt;</span><span class="m">25</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="rename">rename</h3>
+<p><code>rename</code> permite cambiar el nombre de una variable</p>
+<p>La syntaxis es la siguiente:</p>
+<div class="highlight"><span class="filename">rename</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">rename</span> variable nuevo_nombre
+</code></pre></div>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">rename</span> joven joven_etiqueta
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="drop">drop</h3>
+<p><code>drop</code> sirve para eliminar alguna variable que no nos interesa mantener en la base de datos</p>
+<div class="highlight"><span class="filename">drop</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">drop</span> cuestionario
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="keep">keep</h3>
+<p><code>keep</code> es útil cuando se quiere mantener solo algunas variables necesarias y eliminar el resto</p>
+<div class="highlight"><span class="filename">keep</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">keep</span> sexo edad idioma joven_etiqueta condact
+</code></pre></div>
 
 
 

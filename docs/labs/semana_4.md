@@ -1,6 +1,7 @@
 
 # Interfaz de STATA e importación de bases de datos
 
+[Descargar do-file](https://drive.google.com/uc?export=download&id=18dkkMCN221ZttAd8MFKTLt21W04wfvEV)
 
 [Descargar base de datos](https://drive.google.com/uc?export=download&id=1yuzcJjZu4sSOg1hKjlPhDHXrUZUqfpEF)
 
@@ -239,7 +240,6 @@ gsort spmb
 | `destring`    	| Convertir string a número     	|
 | `gsort`       	| Ordenar la base de datos      	|
 
-[Descargar do-file](https://drive.google.com/uc?export=download&id=18dkkMCN221ZttAd8MFKTLt21W04wfvEV)
 
 [Descargar práctica](https://drive.google.com/uc?export=download&id=1E1jPcJLIlELhU5MjBwpaJ9NNro9dV4Tc)
 

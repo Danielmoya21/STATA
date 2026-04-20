@@ -16,33 +16,25 @@ img {
     width: auto;
 }
 
-/* default theme */
-[data-md-color-scheme="default"] .md-typeset p > code {
-  color: #c74ca4;
-  background-color: #f9f2f4;
-}
-/* Dark theme */
-[data-md-color-scheme="slate"] .md-typeset p > code {
-  color: #ffb6db;
-  background-color: #2a1e23;
-}
-/* default theme */
-[data-md-color-scheme="default"] .md-typeset td > code {
-  color: #c74ca4;
-  background-color: #f9f2f4;
-}
-/* Dark theme */
-[data-md-color-scheme="slate"] .md-typeset td > code {
-  color: #ffb6db;
-  background-color: #2a1e23;
+[data-md-color-scheme="default"] {
+  --code-color: #c74ca4;
+  --code-bg: #f9f2f4;
+  --table-stripe-bg: #f5f5f5;
 }
 
-/* default theme */
-[data-md-color-scheme="default"] .md-typeset table tr:nth-child(even) {
-  background-color: #f5f5f5;
+[data-md-color-scheme="slate"] {
+  --code-color: #ffb6db;
+  --code-bg: #2a1e23;
+  --table-stripe-bg: #272a35;
 }
-[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) {
-  background-color: #272a35;
+
+.md-typeset :is(p, td) > code {
+  color: var(--code-color);
+  background-color: var(--code-bg);
+}
+
+.md-typeset table tr:nth-child(even) {
+  background-color: var(--table-stripe-bg);
 }
 
 .md-typeset h3 {
