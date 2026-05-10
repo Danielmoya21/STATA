@@ -16,7 +16,7 @@
     
     
       
-        <title>Manejo de Bases de Datos - Datos Económicos UCR</title>
+        <title>Semana 10 - Datos Económicos UCR</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manejo-de-bases-de-datos" class="md-skip">
+        <a href="#acceder-datos-del-inec" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manejo de Bases de Datos
+              Semana 10
             
           </span>
         </div>
@@ -466,6 +466,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -632,8 +678,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -642,29 +686,89 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#append" class="md-nav__link">
+  <a href="#acceder-datos-del-inec" class="md-nav__link">
     <span class="md-ellipsis">
-      Append
+      Acceder Datos del INEC
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#merge" class="md-nav__link">
+  <a href="#analisis" class="md-nav__link">
     <span class="md-ellipsis">
-      Merge
+      Análisis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Análisis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scc-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      scc install
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#collapse" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#egen" class="md-nav__link">
     <span class="md-ellipsis">
-      Collapse
+      egen
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    <span class="md-ellipsis">
+      group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bysort" class="md-nav__link">
+    <span class="md-ellipsis">
+      bysort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xtile" class="md-nav__link">
+    <span class="md-ellipsis">
+      xtile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cv2" class="md-nav__link">
+    <span class="md-ellipsis">
+      cv2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -684,87 +788,261 @@
 
 
 
-<h1 id="manejo-de-bases-de-datos">Manejo de Bases de Datos</h1>
-<p>A veces al trabajar con bases de datos ocurre que necesitamos combinar los datos de 2 o más bases.</p>
-<p>Piense por ejemplo en cómo se puede evaluar el nivel de pobreza del país.</p>
-<p>Se tiene claro que podemos recurrir a los datos de la ENAHO para estudiar los indicadores de pobreza; sin embargo, hay un tema importante. ¿Cómo se sabe si el país está mejorando o empeorando en cuanto a la reducción de la pobreza?</p>
-<details class="success">
-<summary>Gráfico</summary>
-<p><img alt="pobreza" src="../../images/semana10/pobreza.png" /></p>
-</details>
-<p>El gráfico anterior no nos dice mucho acerca de la situación del país si no somos capaces de contrastarlo con datos de años anteriores.</p>
-<p>Dado que la ENAHO del 2024 solo tiene datos del año 2024, si queremos compararlo con otros años debemos de agregar los datos de la ENAHO 2023 por ejemplo.</p>
+  <h1>Semana 10</h1>
+
+<h2 id="acceder-datos-del-inec">Acceder Datos del INEC</h2>
+<p>En los laboratorios anteriores se han usado diferentes bases de datos, que en su mayoría pertenecen a las bases de datos que publica el INEC.</p>
+<div class="admonition info">
+<p class="admonition-title">INEC</p>
+<p>El INEC es el Instituto Nacional de Estadística y Censos, y son quienes realizan las encuestas que se usan para analizar la situación socioeconómica del país, como por ejemplo el desempleo, la informalidad, la pobreza, entre otros. </p>
+</div>
+<p>Para descargar los microdatos que se obtienen en las encuestas podemos dirigrnos a la página <a href="https://inec.cr/">https://inec.cr/</a></p>
+<p><img alt="image" src="../../images/semana8/INEC.png" /></p>
+<p>Seleccionamos "Estadísticas y Fuentes" y luego "Bases de datos y documentación"</p>
+<p>Aquí se encuentran diferentes las diferentes encuestas nacionales, por ejemplo la Encuesta Nacional de Hogares, la Encuesta Continua de Empleo y muchas más. </p>
+<p>En nuestro caso vamos a descargar la Encuesta Nacional de Hogares de 2024</p>
+<p><img alt="image" src="../../images/semana8/microdatos.png" /></p>
+<p>Seleccionamos la opción obtener microdatos y descargamos la base de datos.</p>
 <p><br></p>
 <hr />
-<h3 id="append">Append</h3>
-<p><code>Append</code> nos permite pegar bases de datos de manera vertical.</p>
-<p><img alt="append" src="../../images/semana10/append.png" /></p>
-<p>Note en la imagen, que tenemos 2 bases de datos diferentes, una naranja y otra azul.</p>
-<p>Al usar append, lo que hacemos es unirlas poniendo una bajo otra, para que así queden los datos en una única base.</p>
+<h2 id="analisis">Análisis</h2>
+<p>Una vez descargamos la base de datos podemos empezar el análisis</p>
 <div class="admonition warning">
-<p class="admonition-title">Cuidado</p>
-<p>Note que las variables de las 2 bases de datos son las mismas (A y B). Si trataramos de unir bases de datos con variables diferentes, solo se van a unir aquellas que estén en ambas bases de datos. El resto quedarán como observaciones perdidas (.)</p>
+<p class="admonition-title">Cargar la base de datos</p>
+<p>Note que el formato del archivo es .sav, por lo que para cargar la base de datos usamos <code>import spss</code></p>
 </div>
-<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">append</span> using <span class="s">&quot;base de datos&quot;</span>
-</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Tip</p>
-<p>También es posible crear una nueva variable que sirva como identificador sobre cuáles observaciones eran de la base original y cuales observaciones son de la base que se añadió</p>
+<p>Puede notar que la base de datos es grande y algunas variables tienen nombres complicados. </p>
+<p>Es fácil renombrar todas las variables en minúsculas o mayúsculas para evitar errores provocados por escribir mal algún nombre</p>
 </div>
-<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">append</span> using <span class="s">&quot;enaho_2023.dta&quot;</span>,<span class="k"> gen</span>(anno)
+<p>Empezamos renombrando todas las variables a minúsculas</p>
+<p><div class="highlight"><span class="filename">rename</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">*Con el * le decimos a STATA que renombre todas las variables</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">*Con lower STATA entiende que debe dejar el mismo nombre pero en minúscula</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">rename</span> <span class="o">*</span>, lower()
 </code></pre></div>
-<p>Por defecto a la variable anno se le añaden valores de 0 para las observaciones originales y 1 para las que fueron añadidas. Pero podemos ajustarla para que coincida con los años.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">recode</span> anno (<span class="m">0</span>=<span class="m">2024</span>) (<span class="m">1</span>=<span class="m">2023</span>)
+<br>
+En este laboratorio haremos un análisis separando a la población por grupos, por ejemplo, separando por ciudadanos nacionales y extranjeros.</p>
+<p>Para esto usamos la variable <code>lugnac</code>, que indica el lugar de nacimiento de la persona.</p>
+<p>Usando codebook podemos obtener un resumen de como funciona la variable</p>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">                  type</span>:  numeric (byte)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">             label</span>:  labels85
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">             range</span>:  [<span class="m">0</span>,<span class="m">4</span>]                        units:  <span class="m">1</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>     unique values:  <span class="m">5</span>                        missing .:  <span class="m">0</span><span class="o">/</span><span class="m">30</span>,<span class="m">846</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        tabulation:  Freq.   Numeric  Label
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                    <span class="m">20</span>,<span class="m">384</span>         <span class="m">0</span>  En mismo cantón<span class="k"> de</span> residencia
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                     <span class="m">7</span>,<span class="m">720</span>         <span class="m">1</span>  En otro cantón<span class="k"> de</span> residencia
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>                     <span class="m">2</span>,<span class="m">167</span>         <span class="m">2</span>  En Nicaragua
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>                       <span class="m">164</span>         <span class="m">3</span>  En otro país centroamericano
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                       <span class="m">411</span>         <span class="m">4</span>  En otro país del mundo
 </code></pre></div>
-<p>Ahora si podemos visualizar la variación de un año a otro.</p>
-<div class="highlight"><span class="filename">Gráfico</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">graph</span> bar (percent), asyvars over(anno) over(np) ylabel(<span class="m">0</span>(<span class="m">10</span>)<span class="m">100</span>) <span class="cs">///</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ytitle(<span class="s">&quot;%&quot;</span>) title(<span class="s">&quot;Incidencia de la Pobreza, Costa Rica, 2024&quot;</span>, place(<span class="s">&quot;left&quot;</span>)) <span class="cs">///</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>bar(<span class="m">1</span>, color(red)) bar(<span class="m">2</span>, color(blue))
+</details>
+<p>En este caso vemos que la variable toma 5 valores posibles, sin embargo, ya que solo nos interesa saber si la persona es nacional o extranjera, entonces podemos crear un indicador</p>
+<div class="highlight"><span class="filename">Indicador</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">recode</span> lugnac (<span class="m">0</span><span class="o">/</span><span class="m">1</span>=<span class="m">1</span>) (<span class="m">2</span><span class="o">/</span><span class="m">4</span>=<span class="m">0</span>),<span class="k"> gen</span>(nacional)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">*Creamos y aplicamos la etiqueta</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">label</span> define nacional_lbl <span class="m">0</span> <span class="s">&quot;Extranjero&quot;</span> <span class="m">1</span> <span class="s">&quot;Nacional&quot;</span>,<span class="k"> replace</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">label</span> values nacional nacional_lbl
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">*Tabulamos la variable</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">tab</span> nacional
+</code></pre></div>
+<p><br></p>
+<p>Queremos ver los años de experiencia de las personas, para esto le restamos los años de educación y los 6 años antes de primer grado a la edad de la persona</p>
+<div class="highlight"><span class="filename">Años de experiencia</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">gen</span> experiencia = a5 <span class="o">-</span> escolari <span class="o">-</span> <span class="m">6</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">sum</span> experiencia
+</code></pre></div>
+<details class="failure">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    Variable |        Obs        Mean    Std. Dev.       Min        Max
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">-------------+---------------------------------------------------------</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>experiencia |     <span class="m">30</span>,<span class="m">846</span>    <span class="m">24.36731</span>    <span class="m">22.36055</span>        <span class="o">-</span><span class="m">95</span>         <span class="m">91</span>
+</code></pre></div>
+</details>
+<p>Note que el valor mínimo es de -95, pero eso significa que hay personas con ~90 años de escolaridad, lo cual no es posible</p>
+<p><br></p>
+<hr />
+<h3 id="scc-install">scc install</h3>
+<div class="admonition info">
+<p class="admonition-title">Instalar paquetes</p>
+<p>A veces la comunidad elabora comandos que no se encuentran en la versión oficial de STATA</p>
+<p>Estos paquetes se pueden instalar usando <code>ssc install [paquete]</code></p>
+</div>
+<p>Para nuestro caso es útil ver los valores únicos y las etiquetas, <code>codebook</code> solo muestra algunos valores, pero si queremos verlos todos debemos usar otro comando llamado <code>fre</code></p>
+<p>Primero instalamos el paquete y luego podemos usarlo como cualquier otro comando</p>
+<div class="highlight"><span class="filename">fre</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">*Instalarlo / Solo se tiene que hacer una vez</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">ssc</span> install fre
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">*Luego se usa indicandole qué variable tabular</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>fre escolari
 </code></pre></div>
 <details class="success">
-<summary>Gráfico</summary>
-<p><img alt="pobreza" src="../../images/semana10/pobreza_annos.png" /></p>
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>escolari <span class="o">--</span> Años<span class="k"> de</span> escolaridad
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="o">------------------------------------------------------------------------------------------------</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>                                                    |      Freq.    Percent      Valid       Cum.
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="o">---------------------------------------------------+--------------------------------------------</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    Valid   <span class="m">0</span>  Sin escolaridad, preescolar o enseñanza |       <span class="m">2971</span>       <span class="m">9.63</span>       <span class="m">9.63</span>       <span class="m">9.63</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            especial                                |                                            
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>            <span class="m">1</span>  Un año                                  |        <span class="m">814</span>       <span class="m">2.64</span>       <span class="m">2.64</span>      <span class="m">12.27</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>            <span class="m">2</span>  Dos años                                |        <span class="m">814</span>       <span class="m">2.64</span>       <span class="m">2.64</span>      <span class="m">14.91</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>            <span class="m">3</span>  Tres años                               |       <span class="m">1121</span>       <span class="m">3.63</span>       <span class="m">3.63</span>      <span class="m">18.54</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>            <span class="m">4</span>  Cuatro años                             |        <span class="m">776</span>       <span class="m">2.52</span>       <span class="m">2.52</span>      <span class="m">21.06</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>            <span class="m">5</span>  Cinco años                              |       <span class="m">1047</span>       <span class="m">3.39</span>       <span class="m">3.39</span>      <span class="m">24.45</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>            <span class="m">6</span>  Seis años                               |       <span class="m">6405</span>      <span class="m">20.76</span>      <span class="m">20.76</span>      <span class="m">45.22</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            <span class="m">7</span>  Siete años                              |       <span class="m">1138</span>       <span class="m">3.69</span>       <span class="m">3.69</span>      <span class="m">48.91</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>            <span class="m">8</span>  Ocho años                               |       <span class="m">1399</span>       <span class="m">4.54</span>       <span class="m">4.54</span>      <span class="m">53.44</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>            <span class="m">9</span>  Nueve años                              |       <span class="m">2070</span>       <span class="m">6.71</span>       <span class="m">6.71</span>      <span class="m">60.15</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>            <span class="m">10</span> Diez años                               |        <span class="m">960</span>       <span class="m">3.11</span>       <span class="m">3.11</span>      <span class="m">63.27</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>            <span class="m">11</span> Once años                               |       <span class="m">5185</span>      <span class="m">16.81</span>      <span class="m">16.81</span>      <span class="m">80.08</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>            <span class="m">12</span> Doce años                               |        <span class="m">948</span>       <span class="m">3.07</span>       <span class="m">3.07</span>      <span class="m">83.15</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>            <span class="m">13</span> Trece años                              |        <span class="m">579</span>       <span class="m">1.88</span>       <span class="m">1.88</span>      <span class="m">85.03</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>            <span class="m">14</span> Catorce años                            |       <span class="m">1029</span>       <span class="m">3.34</span>       <span class="m">3.34</span>      <span class="m">88.36</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>            <span class="m">15</span> Quince años                             |       <span class="m">1138</span>       <span class="m">3.69</span>       <span class="m">3.69</span>      <span class="m">92.05</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>            <span class="m">16</span> Dieciseis años                          |        <span class="m">984</span>       <span class="m">3.19</span>       <span class="m">3.19</span>      <span class="m">95.24</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>            <span class="m">17</span> Diecisiete años                         |       <span class="m">1300</span>       <span class="m">4.21</span>       <span class="m">4.21</span>      <span class="m">99.46</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>            <span class="m">18</span> Dieciocho años                          |         <span class="m">21</span>       <span class="m">0.07</span>       <span class="m">0.07</span>      <span class="m">99.52</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>            <span class="m">20</span> Veinte años                             |         <span class="m">17</span>       <span class="m">0.06</span>       <span class="m">0.06</span>      <span class="m">99.58</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>            <span class="m">21</span> Veintiuno años                          |          <span class="m">2</span>       <span class="m">0.01</span>       <span class="m">0.01</span>      <span class="m">99.59</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>            <span class="m">22</span> Veintidós años                          |         <span class="m">59</span>       <span class="m">0.19</span>       <span class="m">0.19</span>      <span class="m">99.78</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>            <span class="m">99</span> Ignorado                                |         <span class="m">69</span>       <span class="m">0.22</span>       <span class="m">0.22</span>     <span class="m">100.00</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>            Total                                      |      <span class="m">30846</span>     <span class="m">100.00</span>     <span class="m">100.00</span>           
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>    <span class="o">------------------------------------------------------------------------------------------------</span>
+</code></pre></div>
+</details>
+<p>Note que no se debería tomar en cuenta el 99, ya que representa datos ignorados</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">*Eliminamos la variable</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">drop</span> experiencia
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">*Generamos la variable de nuevo</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">gen</span> experiencia = a5 <span class="o">-</span> escolari <span class="o">-</span> <span class="m">6</span><span class="k"> if</span> escolari<span class="o">!=</span><span class="m">99</span> <span class="o">&amp;</span> a5<span class="o">&gt;</span><span class="m">6</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">*También excluimos a las personas menores de 6 años</span>
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="egen">egen</h3>
+<p>A veces es útil también guardar las estadísticas que generamos como variables</p>
+<p>La mayoría de los comandos que generan estadísticas no son compatibles con <code>gen</code>
+<div class="highlight"><span class="filename">gen</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">*Si tratamos de guardar el promedio del ingreso bruto nos da error</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">gen</span> sal_promedio =<span class="k"> mean</span>(spmb)
+</code></pre></div></p>
+<details class="failure">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="s">&quot;unknown function mean()&quot;</span>
+</code></pre></div>
+</details>
+<div class="admonition info">
+<p class="admonition-title">egen</p>
+<p><code>egen</code> permite crear nuevas variables que contienen algún estadístico calculado, por ejemplo</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> promedio</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> varianza</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> curtosis </li>
+</ul>
+</div>
+<div class="highlight"><span class="filename">egen</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">*Esta forma si es correcta</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">egen</span> sal_promedio =<span class="k"> mean</span>(spmb)
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="group">group</h3>
+<p>Siguiendo con el análisis por grupos, a veces es interesante comparar más que solo 2 categorías, por ejemplo, además de personas migrantes y nacionales, comparar migrantes mujeres y nacionales mujeres</p>
+<p><code>group</code> nos permite hacer una variable que agrupa según las variables que le indicamos</p>
+<div class="highlight"><span class="filename">group</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">*Agrupar por nacionalidad y sexo</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">egen</span> nac_sexo = group(nacional a4)
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">label</span> define nac_sexo_lbl <span class="m">1</span> <span class="s">&quot;H_ext&quot;</span> <span class="m">2</span> <span class="s">&quot;M_ext&quot;</span> <span class="m">3</span> <span class="s">&quot;H_nac&quot;</span> <span class="m">4</span> <span class="s">&quot;M_nac&quot;</span>,<span class="k"> replace</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">label</span> values nac_sexo 
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="bysort">bysort</h3>
+<p><code>bysort</code> es útil para hacer operaciones entre grupos. La diferencia es que cuando usamos bysort, en lugar de aplicar la operación a toda la base de datos, va a dividir la base por grupo y luego va a ejecutar el comando que queremos.</p>
+<div class="highlight"><span class="filename">bysort</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">*Tabular la rama de ocupación de mujeres costarricenses y extranjeras</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">bysort</span> nac_sexo:<span class="k"> tab</span> ramaemppri<span class="k"> if</span> <span class="nf">inlist</span>(nac_sexo, <span class="m">2</span>,<span class="m">4</span>),<span class="k"> sort</span>
+</code></pre></div>
+<p>También es posible crear variables</p>
+<div class="highlight"><span class="filename">bysort</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">*Crear una variable que indique el total de personas en cada grupo</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1">*_N indica el total de cada grupo</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">bysort</span> nac_sexo:<span class="k"> gen</span> total_personas = _N
+</code></pre></div>
+<p><br></p>
+<hr />
+<h3 id="table">table</h3>
+<p><code>table</code> es muy similar a <code>tab</code>, pero este nos permite hacer tablas que combinen estadísticos de diferentes variables.</p>
+<p>Su syntaxis es la siguiente</p>
+<p><div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">table</span> variable_filas [opcional variable_columnas], contents(estadístico_1 variable_1 ...)
+</code></pre></div>
+Por ejemplo, si nos interesa ver el salario promedio, la desviación estándar, los años de experiencia promedio y los años de educación promedio, según la nacionalidad y el sexo de la persona podemos hacerlo de la siguiente manera:</p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">table</span> nac_sexo<span class="k"> if</span> (escolari<span class="o">!=</span><span class="m">99</span>) <span class="o">&amp;</span> (spmb<span class="o">&gt;</span><span class="m">0</span>), contents(mean spmb sd spmb<span class="k"> mean</span> escolari<span class="k"> mean</span> experiencia freq)<span class="k"> format</span>(<span class="nx">%12.2fc</span>)
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">--------------------------------------------------------------------------------</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>group(nac |
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>ional a4) |  <span class="k"> mean</span>(spmb)      sd(spmb) <span class="k"> mean</span>(esco<span class="o">~</span>i) <span class="k"> mean</span>(expe<span class="o">~</span>a)         Freq.
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="o">----------+---------------------------------------------------------------------</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    H_ext |   <span class="m">470</span>,<span class="m">127.67</span>    <span class="m">507</span>,<span class="m">200.79</span>          <span class="m">7.49</span>         <span class="m">28.64</span>      <span class="m">1</span>,<span class="m">252.00</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    M_ext |   <span class="m">392</span>,<span class="m">741.22</span>    <span class="m">478</span>,<span class="m">767.23</span>          <span class="m">7.70</span>         <span class="m">29.31</span>      <span class="m">1</span>,<span class="m">479.00</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    H_nac |   <span class="m">575</span>,<span class="m">829.17</span>    <span class="m">497</span>,<span class="m">385.73</span>          <span class="m">7.89</span>         <span class="m">25.30</span>     <span class="m">13</span>,<span class="m">448.00</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    M_nac |   <span class="m">562</span>,<span class="m">643.41</span>    <span class="m">496</span>,<span class="m">512.49</span>          <span class="m">8.25</span>         <span class="m">27.13</span>     <span class="m">14</span>,<span class="m">598.00</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="o">--------------------------------------------------------------------------------</span>
+</code></pre></div>
 </details>
 <p><br></p>
 <hr />
-<h3 id="merge">Merge</h3>
-<p>A veces también es conveniente añadir datos que corresponden a una base de datos diferente. Por ejemplo, piense que nos interesa ver el crecimiento del salario promedio de las personas.</p>
-<p>Podríamos simplemente calcular el salario promedio por año. Sin embargo, aún cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.</p>
-<p>Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente, ya que la publica el Banco Central.</p>
-<p><a href="https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/969?Cuadro=51">Puede descargar los datos del IPC dando click al enlace</a></p>
-<p>Una vez que descarga la base, nuestro objetivo es añadir el valor del IPC del año correspondiente.</p>
-<p><code>merge</code> nos permite unir dos bases de datos que tienen una columna en común.</p>
-<p><img alt="pobreza" src="../../images/semana10/merge.png" /></p>
-<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">merge</span> <span class="m">1</span>:<span class="m">1</span> variable_en_común using <span class="s">&quot;base_de_datos_a_unir&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">*merge m:1 ...</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">*merge 1:m ...</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">*merge m:m ...</span>
+<h3 id="xtile">xtile</h3>
+<p>Si queremos hacer un análisis más detallado, por ejemplo identificar los años de escolaridad promedio dependiendo del quntil de ingreso de la persona</p>
+<p>Podemos crea una variable que nos indique al quintil que pertenece la persona y luego una tabla que muestre los años de escolaridad</p>
+<p><code>xtile</code> nos permite crear una variable que indique el quintil</p>
+<div class="highlight"><span class="filename">syntaxis</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">xtile</span> nueva_var =<span class="k"> var</span>, nquantiles(#)
 </code></pre></div>
-<p>El segmento 1:1 le indica a STATA que cada identificador tiene una única observación.</p>
-<p>En nuestro caso la base de datos de la ENAHO tiene múltiples observaciones para un mismo año, por lo que no podemos usar 1:1.</p>
-<p>Debemos decirle a STATA que la base de datos 1 tiene múltiples observaciones para cada año. Esto lo hacemos poniendo una m de many.</p>
-<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">merge m</span>:<span class="m">1</span> anno using ipc<span class="m">.</span>dta
-</code></pre></div>
-<p><br></p>
-<hr />
-<h3 id="collapse">Collapse</h3>
-<p>Finalmente se quiere realizar algún tipo de estadística que nos permita resumir y visualizar los datos.</p>
-<p>En nuestro caso, ya que estamos trabajando con salarios reales y nominales, podemos realizar un gráfico de líneas que compare la evolución de los salarios en el tiempo.</p>
-<p><code>collapse</code> nos resumir los datos que tenemos en la base de acuerdo a las características de interés.</p>
-<div class="highlight"><span class="filename">Syntaxis</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">collapse</span> (estadistico) variable (estadistico_2) variable_2,<span class="k"> by</span>(variable_agrupar) 
-</code></pre></div>
-<p>Por ejemplo, si queremos resumir los ingresos salariales brutos según su promedio anual, utilizamos el siguiente código.</p>
-<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">collapse</span> (mean) ipsbt ipsbt_real,<span class="k"> by</span>(anno) 
-</code></pre></div>
-<div class="highlight"><span class="filename">Gráfico</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">graph twoway</span> connected ipsbt ipsbt_real anno, xlabel(<span class="m">2014</span>(<span class="m">2</span>)<span class="m">2025</span>) <span class="cs">///</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>legend(label(<span class="m">1</span> <span class="s">&quot;Salario nominal&quot;</span>)<span class="k"> label</span>(<span class="m">2</span> <span class="s">&quot;Salario real&quot;</span>)) <span class="cs">///</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>xtitle(<span class="s">&quot;Año&quot;</span>) ytitle(<span class="s">&quot;Colones&quot;</span>) <span class="cs">///</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>title(<span class="s">&quot;Salario nominal y real, Costa Rica, 2015-2024&quot;</span>, place(<span class="s">&quot;left&quot;</span>) span)
+<div class="highlight"><span class="filename">xtile</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">xtile</span> quintil_ingreso =  spmb, nquantiles(<span class="m">5</span>)
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1">*Si solo queremos resumir una variable, se puede usar tab con la opción sum</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">tab</span> quintil_ingreso<span class="k"> if</span> escolari<span class="o">!=</span><span class="m">99</span>,<span class="k"> sum</span>(escolari)
 </code></pre></div>
 <details class="success">
-<summary>Gráfico</summary>
-<p><img alt="salario" src="../../images/semana10/salarios.png" /></p>
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>    <span class="m">5</span> quantiles |   Summary of Años<span class="k"> de</span> escolaridad
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>        of spmb |        Mean   Std. Dev.       Freq.
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="o">------------+------------------------------------</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>            <span class="m">1</span> |           <span class="m">8</span>           <span class="m">3</span>       <span class="m">2</span>,<span class="m">018</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>            <span class="m">2</span> |           <span class="m">9</span>           <span class="m">3</span>       <span class="m">1</span>,<span class="m">936</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>            <span class="m">3</span> |           <span class="m">9</span>           <span class="m">3</span>       <span class="m">1</span>,<span class="m">973</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>            <span class="m">4</span> |          <span class="m">12</span>           <span class="m">4</span>       <span class="m">1</span>,<span class="m">943</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>            <span class="m">5</span> |          <span class="m">15</span>           <span class="m">3</span>       <span class="m">1</span>,<span class="m">968</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="o">------------+------------------------------------</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>        Total |          <span class="m">10</span>           <span class="m">4</span>       <span class="m">9</span>,<span class="m">838</span>
+</code></pre></div>
 </details>
+<p>Si se quiere ver el valor de los percentiles se puede usar la opción detail con <code>summarize</code></p>
+<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">sum</span> spmb, detail
+</code></pre></div>
+<details class="success">
+<summary>Resultado</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>                    Salario principal monetario bruto
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="o">-------------------------------------------------------------</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>        Percentiles      Smallest
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="m">1</span>%        <span class="m">30000</span>           <span class="m">4000</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="m">5</span>%       <span class="m">100000</span>           <span class="m">4000</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="m">10</span>%       <span class="m">180000</span>           <span class="m">4500</span>       Obs               <span class="m">9</span>,<span class="m">866</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="m">25</span>%       <span class="m">300000</span>           <span class="m">5000</span>       Sum of Wgt.       <span class="m">9</span>,<span class="m">866</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    <span class="m">50</span>%       <span class="m">400000</span>                      Mean           <span class="m">553925.7</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>                            Largest       Std. Dev.      <span class="m">498383.2</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="m">75</span>%       <span class="m">606000</span>        <span class="m">6000000</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="m">90</span>%      <span class="m">1092858</span>        <span class="m">6000000</span>       Variance       <span class="m">2.48e+11</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>    <span class="m">95</span>%      <span class="m">1500000</span>        <span class="m">6307560</span>       Skewness       <span class="m">3.497803</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>    <span class="m">99</span>%      <span class="m">2628150</span>        <span class="m">7000000</span>       Kurtosis       <span class="m">23.43865</span>
+</code></pre></div>
+</details>
+<p><br></p>
+<hr />
+<h3 id="cv2">cv2</h3>
+<p><code>cv2</code> nos permite calcular el coeficiente de variación para alguna variable, el cual indica cuanto representa la desviación estándar relativo al promedio de la variable. Esto nos permite identificar la variabilidad.</p>
+<div class="highlight"><span class="filename">cv2</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>cv2 spmb experiencia
+</code></pre></div>
 
 
 
@@ -817,6 +1095,8 @@
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
