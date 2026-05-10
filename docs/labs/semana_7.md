@@ -1,4 +1,12 @@
 
+# Análisis de información y tablas
+
+[Descargar base de datos](https://drive.google.com/uc?export=download&id=1_LDMMda8NZ4WS_4UrcyHbiZSh5kibcit)
+
+[Descargar do-file](https://drive.google.com/uc?export=download&id=1enfMC_4weM-eFkRWaXp_in4vQ0Z9sNaH)
+
+---
+
 ## Comandos
 
 Los economistas están interesados en estudiar diferentes problemas sociales, para lo cual sus principales fuentes de información son las encuestas nacionales, como la ENAHO, ECE y ENIGH.
@@ -34,9 +42,11 @@ count if sexo==1
 count if sexo_texto=="Hombre"
 ```
 
-<!-- !!! info "Etiquetas"
-    Las etiquetas suelen ser útiles porque nos evitan errores al escribir condiciones, los números se pueden usar para ordenar categorías y -->
+!!! info "Etiquetas"
+    Las etiquetas suelen ser útiles porque 
 
+    - Nos evitan errores al escribir condiciones 
+    - Podemos usar los números para dar un orden a las categorías, como en el caso del nivel educativo 
 <br>
 
 ---
@@ -111,7 +121,24 @@ Ahora podríamos verificar la condición usando recode
 
 ---
 ### recode
-`recode` nos permite recodificar los valores de una variable. Por ejemplo, para este caso podríamos decirle que los agrupe en 2 categorías según el nivel académico
+`recode` nos permite recodificar los valores de una variable. Esto es útil cuando queremos crear variables nuevas a partir de una variable que ya existe.
+
+Por ejemplo, imagine que nos interesa conocer la diferencia en salarios entre personas que terminaron el colegio y aquellos que no. Note que tenemos la variable educacion_cat, que muestra la siguiente información.
+
+| Número | Nivel Educativo |
+|:------:|:----------------|
+| 0 | Ninguno |
+| 1 | Primaria incompleta |
+| 2 | Primaria completa |
+| 3 | Secundaria incompleta |
+| 4 | Secundaria completa |
+| 5 | Universitario sin título |
+| 6 | Universitario con título |
+| 9 | No especificado |
+
+Sin embargo, nos interesa agrupar a las personas en solo 2 categorías, 1 si completó bachillerato y 0 si no lo hizo.
+
+Esto lo podemos realizar facilmente con `recode` de la siguiente manera.
 
 ```stata title="recode"
 *Es posible usar replace o generate
@@ -160,12 +187,12 @@ mean if bachillerato==0
 <br>
 ## Tablas
 
-Llegados a este punto ya estamos familiarizados con el uso de STATA, por lo que podemos enfocarnos en analizar los datos que tenemos usando tablas y gráficos.
+Llegados a este punto ya estamos familiarizados con el uso de Stata, por lo que podemos enfocarnos en analizar los datos que tenemos usando tablas y gráficos.
 
 ---
 ### tab
 
-`tab` es el comando que se usa para generar la mayoría de tablas en STATA
+`tab` es el comando que se usa para generar la mayoría de tablas en Stata
 
 Su syntaxis es muy simple, solamente se debe de especificar las variables que queremos incluir en la tabla
 
@@ -190,15 +217,17 @@ tab educacion_cat
 
     ```
 
-Como podemos ver en el resultado, STATA despliega una tabla que nos indica la cantidad de observaciones, el valor en términos porcentuales y una columna adicional llamada cum, que se refiere al porcentage acumulado.
+Como podemos ver en el resultado, Stata despliega una tabla que nos indica la cantidad de observaciones, el valor en términos porcentuales y una columna adicional llamada cum, que se refiere al porcentaje acumulado.
 
 
-Esto nos permite de forma muy clara y concisa responder preguntas como por ejemplo, ¿Qué porcentage de la población cuenta con un grado equivalente o superior a secundaria completa?
+Esto nos permite de forma muy clara y concisa responder preguntas como por ejemplo, ¿Qué porcentaje de la población cuenta con un grado equivalente o superior a secundaria completa?
 
 <br>
 
 ---
 ### tab con 2 variables
+
+No obstante, en ocasiones nos interesa comparar distribuciones entre grupos. Por ejemplo, en este caso nos interesa comparar el nivel educativo entre hombres y mujeres, para esto una tabla con una sola división se nos queda corta.
 
 También es posible agregar 2 variables a la tabla, en este caso la primera será la variable que sale en las filas y la segunda la que sale en las columnas
 
@@ -285,6 +314,15 @@ sum salario_neto
 
 En el resultado se puede observar la cantidad de observaciones, el valor promedio, la desviación estándar y los valores máximos y mínimos.
 
+También es posible combinar `tablas` con `sum`, para obtener medidas estadísticas de una variable según categorías.
+
+Por ejemplo, si nos interesa obtener el salario promedio y la desviación estándas según el nivel académico de la persona, entonces podemos usar el siguiente comando:
+
+
+```stata title="Tablas y estadísticas"
+tab educacion_cat, sum(Salario_neto)
+```
+
 <br>
 
 ## Gráficos
@@ -309,24 +347,3 @@ hist amos_educacion, by(zona) frequency
 
 <br>
 
----
-### gráfico de cajas
-
-Por último se tiene el gráfico de cajas, que nos indica la distribución en cuartiles de alguna variable
-
-En este caso se realiza un gráfico de cajas para analizar la variable salario neto
-
-```stata title="Grafico de cajas y bigotes"
-graph box salario_neto
-```
-En principio el gráfico se ve mal, ya que hay valores muy altos de salario que afectan la escala, si fuera posible excluir estos valores entonces se puede usar la opción `nooutsides`
-
-```stata title="Grafico de cajas y bigotes"
-graph box salario_neto, nooutsides
-```
-
-De igual manera se puede dividir el análisis por grupos. Se puede por ejemplo comparar la distribución del salario de las personas según si tienen o no título de bachillerato
-
-```stata title="Ejemplo"
-graph box salario_neto, over(bachillerato) nooutsides
-```

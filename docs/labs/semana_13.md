@@ -1,5 +1,5 @@
 
-<!-- # Factor de Expansión
+# Factor de Expansión
 
 Vamos a empezar cargando la base de datos 
 
@@ -103,12 +103,9 @@ graph box Escolari [w=FACTOR] if Escolari!=99, over(anno)
    
     *Estas no son cubiertas en el curso 
 
---- -->
-
-# Medidas de concentración
-
 <br>
 
+# Medidas de concentración
 ---
 
 ## Repaso sobre percentiles

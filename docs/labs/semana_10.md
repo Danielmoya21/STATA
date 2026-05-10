@@ -1,128 +1,333 @@
 
-# Manejo de Bases de Datos
+## Acceder Datos del INEC
 
-A veces al trabajar con bases de datos ocurre que necesitamos combinar los datos de 2 o más bases.
+En los laboratorios anteriores se han usado diferentes bases de datos, que en su mayoría pertenecen a las bases de datos que publica el INEC.
 
-Piense por ejemplo en cómo se puede evaluar el nivel de pobreza del país.
+!!! info "INEC"
+    El INEC es el Instituto Nacional de Estadística y Censos, y son quienes realizan las encuestas que se usan para analizar la situación socioeconómica del país, como por ejemplo el desempleo, la informalidad, la pobreza, entre otros. 
 
-Se tiene claro que podemos recurrir a los datos de la ENAHO para estudiar los indicadores de pobreza; sin embargo, hay un tema importante. ¿Cómo se sabe si el país está mejorando o empeorando en cuanto a la reducción de la pobreza?
 
-??? success "Gráfico"
-    ![pobreza](../images/semana10/pobreza.png)
+Para descargar los microdatos que se obtienen en las encuestas podemos dirigrnos a la página [https://inec.cr/](https://inec.cr/)
 
-El gráfico anterior no nos dice mucho acerca de la situación del país si no somos capaces de contrastarlo con datos de años anteriores.
+![image](../images/semana8/INEC.png)
 
-Dado que la ENAHO del 2024 solo tiene datos del año 2024, si queremos compararlo con otros años debemos de agregar los datos de la ENAHO 2023 por ejemplo.
+Seleccionamos "Estadísticas y Fuentes" y luego "Bases de datos y documentación"
+
+Aquí se encuentran diferentes las diferentes encuestas nacionales, por ejemplo la Encuesta Nacional de Hogares, la Encuesta Continua de Empleo y muchas más. 
+
+En nuestro caso vamos a descargar la Encuesta Nacional de Hogares de 2024
+
+![image](../images/semana8/microdatos.png)
+
+Seleccionamos la opción obtener microdatos y descargamos la base de datos.
 
 <br>
 
 ---
-### Append
+## Análisis
 
-`Append` nos permite pegar bases de datos de manera vertical.
+Una vez descargamos la base de datos podemos empezar el análisis
 
-
-
-![append](../images/semana10/append.png)
-
-Note en la imagen, que tenemos 2 bases de datos diferentes, una naranja y otra azul.
-
-Al usar append, lo que hacemos es unirlas poniendo una bajo otra, para que así queden los datos en una única base.
-
-!!! warning "Cuidado"
-    Note que las variables de las 2 bases de datos son las mismas (A y B). Si trataramos de unir bases de datos con variables diferentes, solo se van a unir aquellas que estén en ambas bases de datos. El resto quedarán como observaciones perdidas (.)
-
-```stata title="Syntaxis"
-append using "base de datos"
-```
+!!! warning "Cargar la base de datos"
+    Note que el formato del archivo es .sav, por lo que para cargar la base de datos usamos `import spss`
 
 !!! info "Tip"
-    También es posible crear una nueva variable que sirva como identificador sobre cuáles observaciones eran de la base original y cuales observaciones son de la base que se añadió
+    Puede notar que la base de datos es grande y algunas variables tienen nombres complicados. 
+    
+    Es fácil renombrar todas las variables en minúsculas o mayúsculas para evitar errores provocados por escribir mal algún nombre
 
-```stata title="Ejemplo"
-append using "enaho_2023.dta", gen(anno)
+Empezamos renombrando todas las variables a minúsculas
+
+```stata title="rename"
+*Con el * le decimos a STATA que renombre todas las variables
+*Con lower STATA entiende que debe dejar el mismo nombre pero en minúscula
+rename *, lower()
+```
+<br>
+En este laboratorio haremos un análisis separando a la población por grupos, por ejemplo, separando por ciudadanos nacionales y extranjeros.
+
+
+Para esto usamos la variable `lugnac`, que indica el lugar de nacimiento de la persona.
+
+Usando codebook podemos obtener un resumen de como funciona la variable
+
+??? success "Resultado"
+    ```stata
+                      type:  numeric (byte)
+                 label:  labels85
+
+                 range:  [0,4]                        units:  1
+         unique values:  5                        missing .:  0/30,846
+
+            tabulation:  Freq.   Numeric  Label
+                        20,384         0  En mismo cantón de residencia
+                         7,720         1  En otro cantón de residencia
+                         2,167         2  En Nicaragua
+                           164         3  En otro país centroamericano
+                           411         4  En otro país del mundo
+    ```
+
+En este caso vemos que la variable toma 5 valores posibles, sin embargo, ya que solo nos interesa saber si la persona es nacional o extranjera, entonces podemos crear un indicador
+
+```stata title="Indicador"
+recode lugnac (0/1=1) (2/4=0), gen(nacional)
+*Creamos y aplicamos la etiqueta
+label define nacional_lbl 0 "Extranjero" 1 "Nacional", replace
+label values nacional nacional_lbl
+*Tabulamos la variable
+tab nacional
 ```
 
-Por defecto a la variable anno se le añaden valores de 0 para las observaciones originales y 1 para las que fueron añadidas. Pero podemos ajustarla para que coincida con los años.
+<br>
+
+Queremos ver los años de experiencia de las personas, para esto le restamos los años de educación y los 6 años antes de primer grado a la edad de la persona
+
+```stata title="Años de experiencia"
+gen experiencia = a5 - escolari - 6
+sum experiencia
+```
+
+??? failure "Resultado"
+    ```stata
+    
+        Variable |        Obs        Mean    Std. Dev.       Min        Max
+    -------------+---------------------------------------------------------
+    experiencia |     30,846    24.36731    22.36055        -95         91
+
+    ```
+
+Note que el valor mínimo es de -95, pero eso significa que hay personas con ~90 años de escolaridad, lo cual no es posible
+
+<br>
+
+---
+### scc install
+
+!!! info "Instalar paquetes"
+    A veces la comunidad elabora comandos que no se encuentran en la versión oficial de STATA
+
+    Estos paquetes se pueden instalar usando `ssc install [paquete]`
+
+Para nuestro caso es útil ver los valores únicos y las etiquetas, `codebook` solo muestra algunos valores, pero si queremos verlos todos debemos usar otro comando llamado `fre`
+
+Primero instalamos el paquete y luego podemos usarlo como cualquier otro comando
+
+```stata title="fre"
+*Instalarlo / Solo se tiene que hacer una vez
+ssc install fre
+
+*Luego se usa indicandole qué variable tabular
+fre escolari
+```
+??? success "Resultado"
+    ```stata
+    escolari -- Años de escolaridad
+        ------------------------------------------------------------------------------------------------
+                                                        |      Freq.    Percent      Valid       Cum.
+        ---------------------------------------------------+--------------------------------------------
+        Valid   0  Sin escolaridad, preescolar o enseñanza |       2971       9.63       9.63       9.63
+                especial                                |                                            
+                1  Un año                                  |        814       2.64       2.64      12.27
+                2  Dos años                                |        814       2.64       2.64      14.91
+                3  Tres años                               |       1121       3.63       3.63      18.54
+                4  Cuatro años                             |        776       2.52       2.52      21.06
+                5  Cinco años                              |       1047       3.39       3.39      24.45
+                6  Seis años                               |       6405      20.76      20.76      45.22
+                7  Siete años                              |       1138       3.69       3.69      48.91
+                8  Ocho años                               |       1399       4.54       4.54      53.44
+                9  Nueve años                              |       2070       6.71       6.71      60.15
+                10 Diez años                               |        960       3.11       3.11      63.27
+                11 Once años                               |       5185      16.81      16.81      80.08
+                12 Doce años                               |        948       3.07       3.07      83.15
+                13 Trece años                              |        579       1.88       1.88      85.03
+                14 Catorce años                            |       1029       3.34       3.34      88.36
+                15 Quince años                             |       1138       3.69       3.69      92.05
+                16 Dieciseis años                          |        984       3.19       3.19      95.24
+                17 Diecisiete años                         |       1300       4.21       4.21      99.46
+                18 Dieciocho años                          |         21       0.07       0.07      99.52
+                20 Veinte años                             |         17       0.06       0.06      99.58
+                21 Veintiuno años                          |          2       0.01       0.01      99.59
+                22 Veintidós años                          |         59       0.19       0.19      99.78
+                99 Ignorado                                |         69       0.22       0.22     100.00
+                Total                                      |      30846     100.00     100.00           
+        ------------------------------------------------------------------------------------------------
+    ```
+
+
+Note que no se debería tomar en cuenta el 99, ya que representa datos ignorados
 
 ```stata
-recode anno (0=2024) (1=2023)
-```
+*Eliminamos la variable
+drop experiencia
 
-Ahora si podemos visualizar la variación de un año a otro.
-
-```stata title="Gráfico"
-graph bar (percent), asyvars over(anno) over(np) ylabel(0(10)100) ///
-ytitle("%") title("Incidencia de la Pobreza, Costa Rica, 2024", place("left")) ///
-bar(1, color(red)) bar(2, color(blue))
-```
-??? Success "Gráfico" 
-    ![pobreza](../images/semana10/pobreza_annos.png)
-
-<br>
-
----
-### Merge
-
-A veces también es conveniente añadir datos que corresponden a una base de datos diferente. Por ejemplo, piense que nos interesa ver el crecimiento del salario promedio de las personas.
-
-Podríamos simplemente calcular el salario promedio por año. Sin embargo, aún cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.
-
-Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente, ya que la publica el Banco Central.
-
-[Puede descargar los datos del IPC dando click al enlace](https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/969?Cuadro=51)
-
-Una vez que descarga la base, nuestro objetivo es añadir el valor del IPC del año correspondiente.
-
-`merge` nos permite unir dos bases de datos que tienen una columna en común.
-
-![pobreza](../images/semana10/merge.png)
-
-```stata title="Syntaxis"
-merge 1:1 variable_en_común using "base_de_datos_a_unir"
-*merge m:1 ...
-*merge 1:m ...
-*merge m:m ...
-```
-
-El segmento 1:1 le indica a STATA que cada identificador tiene una única observación.
-
-En nuestro caso la base de datos de la ENAHO tiene múltiples observaciones para un mismo año, por lo que no podemos usar 1:1.
-
-Debemos decirle a STATA que la base de datos 1 tiene múltiples observaciones para cada año. Esto lo hacemos poniendo una m de many.
-
-
-```stata title="Ejemplo"
-merge m:1 anno using ipc.dta
+*Generamos la variable de nuevo
+gen experiencia = a5 - escolari - 6 if escolari!=99 & a5>6
+*También excluimos a las personas menores de 6 años
 ```
 
 <br>
 
 ---
-### Collapse
+### egen
 
-Finalmente se quiere realizar algún tipo de estadística que nos permita resumir y visualizar los datos.
+A veces es útil también guardar las estadísticas que generamos como variables
 
-En nuestro caso, ya que estamos trabajando con salarios reales y nominales, podemos realizar un gráfico de líneas que compare la evolución de los salarios en el tiempo.
+La mayoría de los comandos que generan estadísticas no son compatibles con `gen`
+```stata title="gen"
+*Si tratamos de guardar el promedio del ingreso bruto nos da error
+gen sal_promedio = mean(spmb)
+```
+??? failure "Resultado"
+    ```stata
+    "unknown function mean()"
+    ```
 
-`collapse` nos resumir los datos que tenemos en la base de acuerdo a las características de interés.
+!!! info "egen"
+    `egen` permite crear nuevas variables que contienen algún estadístico calculado, por ejemplo
 
-```stata title="Syntaxis"
-collapse (estadistico) variable (estadistico_2) variable_2, by(variable_agrupar) 
+    - [x] promedio
+    - [x] varianza
+    - [x] curtosis 
+
+```stata title="egen"
+*Esta forma si es correcta
+egen sal_promedio = mean(spmb)
 ```
 
-Por ejemplo, si queremos resumir los ingresos salariales brutos según su promedio anual, utilizamos el siguiente código.
+<br>
+
+---
+### group
+
+Siguiendo con el análisis por grupos, a veces es interesante comparar más que solo 2 categorías, por ejemplo, además de personas migrantes y nacionales, comparar migrantes mujeres y nacionales mujeres
+
+`group` nos permite hacer una variable que agrupa según las variables que le indicamos
+
+```stata title="group"
+*Agrupar por nacionalidad y sexo
+egen nac_sexo = group(nacional a4)
+label define nac_sexo_lbl 1 "H_ext" 2 "M_ext" 3 "H_nac" 4 "M_nac", replace
+label values nac_sexo 
+```
+
+<br>
+
+---
+### bysort
+
+`bysort` es útil para hacer operaciones entre grupos. La diferencia es que cuando usamos bysort, en lugar de aplicar la operación a toda la base de datos, va a dividir la base por grupo y luego va a ejecutar el comando que queremos.
+
+```stata title="bysort"
+*Tabular la rama de ocupación de mujeres costarricenses y extranjeras
+bysort nac_sexo: tab ramaemppri if inlist(nac_sexo, 2,4), sort
+```
+
+También es posible crear variables
+
+```stata title="bysort"
+*Crear una variable que indique el total de personas en cada grupo
+*_N indica el total de cada grupo
+bysort nac_sexo: gen total_personas = _N
+```
+
+<br>
+
+---
+### table
+
+`table` es muy similar a `tab`, pero este nos permite hacer tablas que combinen estadísticos de diferentes variables.
+
+Su syntaxis es la siguiente
+
+```stata title="syntaxis"
+table variable_filas [opcional variable_columnas], contents(estadístico_1 variable_1 ...)
+```
+Por ejemplo, si nos interesa ver el salario promedio, la desviación estándar, los años de experiencia promedio y los años de educación promedio, según la nacionalidad y el sexo de la persona podemos hacerlo de la siguiente manera:
 
 ```stata title="Ejemplo"
-collapse (mean) ipsbt ipsbt_real, by(anno) 
+table nac_sexo if (escolari!=99) & (spmb>0), contents(mean spmb sd spmb mean escolari mean experiencia freq) format(%12.2fc)
 ```
 
-```stata title="Gráfico"
-graph twoway connected ipsbt ipsbt_real anno, xlabel(2014(2)2025) ///
-legend(label(1 "Salario nominal") label(2 "Salario real")) ///
-xtitle("Año") ytitle("Colones") ///
-title("Salario nominal y real, Costa Rica, 2015-2024", place("left") span)
+??? success "Resultado"
+    ```stata
+    --------------------------------------------------------------------------------
+    group(nac |
+    ional a4) |   mean(spmb)      sd(spmb)  mean(esco~i)  mean(expe~a)         Freq.
+    ----------+---------------------------------------------------------------------
+        H_ext |   470,127.67    507,200.79          7.49         28.64      1,252.00
+        M_ext |   392,741.22    478,767.23          7.70         29.31      1,479.00
+        H_nac |   575,829.17    497,385.73          7.89         25.30     13,448.00
+        M_nac |   562,643.41    496,512.49          8.25         27.13     14,598.00
+    --------------------------------------------------------------------------------
+    ```
+
+<br>
+
+---
+### xtile
+
+Si queremos hacer un análisis más detallado, por ejemplo identificar los años de escolaridad promedio dependiendo del quntil de ingreso de la persona
+
+Podemos crea una variable que nos indique al quintil que pertenece la persona y luego una tabla que muestre los años de escolaridad
+
+`xtile` nos permite crear una variable que indique el quintil
+
+```stata title="syntaxis"
+xtile nueva_var = var, nquantiles(#)
 ```
 
-??? success "Gráfico"
-    ![salario](../images/semana10/salarios.png)
+```stata title="xtile"
+xtile quintil_ingreso =  spmb, nquantiles(5)
+*Si solo queremos resumir una variable, se puede usar tab con la opción sum
+tab quintil_ingreso if escolari!=99, sum(escolari)
+```
+
+??? success "Resultado"
+    ```stata
+        5 quantiles |   Summary of Años de escolaridad
+            of spmb |        Mean   Std. Dev.       Freq.
+        ------------+------------------------------------
+                1 |           8           3       2,018
+                2 |           9           3       1,936
+                3 |           9           3       1,973
+                4 |          12           4       1,943
+                5 |          15           3       1,968
+        ------------+------------------------------------
+            Total |          10           4       9,838
+    ```
+
+Si se quiere ver el valor de los percentiles se puede usar la opción detail con `summarize`
+
+```stata title="Ejemplo"
+sum spmb, detail
+```
+??? success "Resultado"
+    ```stata
+                        Salario principal monetario bruto
+        -------------------------------------------------------------
+            Percentiles      Smallest
+        1%        30000           4000
+        5%       100000           4000
+        10%       180000           4500       Obs               9,866
+        25%       300000           5000       Sum of Wgt.       9,866
+
+        50%       400000                      Mean           553925.7
+                                Largest       Std. Dev.      498383.2
+        75%       606000        6000000
+        90%      1092858        6000000       Variance       2.48e+11
+        95%      1500000        6307560       Skewness       3.497803
+        99%      2628150        7000000       Kurtosis       23.43865
+
+    ```
+
+<br>
+
+---
+### cv2
+
+`cv2` nos permite calcular el coeficiente de variación para alguna variable, el cual indica cuanto representa la desviación estándar relativo al promedio de la variable. Esto nos permite identificar la variabilidad.
+
+```stata title="cv2"
+cv2 spmb experiencia
+```
+
