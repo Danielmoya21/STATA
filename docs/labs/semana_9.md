@@ -1,7 +1,11 @@
 
 # Medidas de dispersión y forma
 
+[Descargar base de datos](https://drive.google.com/uc?export=download&id=1n6Z3RiZFIU0rSowlmzK94nIiAgvmN9Qu)
 
+[Descargar do-file](https://drive.google.com/uc?export=download&id=1dK-6QB8wMvfdeTjwr_G-fIpToZF2ZBxz)
+
+---
 ## Cargar datos
 
 ```stata
