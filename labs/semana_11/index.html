@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../semana_10/">
+      
+      
+        <link rel="next" href="../../practicas/stata1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Manejo de Bases de Datos - Datos Económicos UCR</title>
+        <title>Semana 11 - Datos Económicos UCR</title>
       
     
     
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manejo de Bases de Datos
+              Semana 11
             
           </span>
         </div>
@@ -216,10 +220,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../semana_4/" class="md-tabs__link">
           
   
@@ -337,24 +343,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -367,7 +378,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Laboratorios
@@ -530,6 +541,98 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Semana 11
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 11
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#append" class="md-nav__link">
+    <span class="md-ellipsis">
+      Append
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collapse
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -798,8 +901,8 @@
 <hr />
 <h3 id="merge">Merge</h3>
 <p>A veces también es conveniente añadir datos que corresponden a una base de datos diferente. Por ejemplo, piense que nos interesa ver el crecimiento del salario promedio de las personas.</p>
-<p>Podríamos simplemente calcular el salario promedio por año. Sin embargo, aún cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.</p>
-<p>Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente, ya que la publica el Banco Central.</p>
+<p>Podríamos simplemente calcular el salario promedio por año. Sin embargo, aun cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.</p>
+<p>Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente.</p>
 <p><a href="https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/969?Cuadro=51">Puede descargar los datos del IPC dando click al enlace</a></p>
 <p>Una vez que descarga la base, nuestro objetivo es añadir el valor del IPC del año correspondiente.</p>
 <p><code>merge</code> nos permite unir dos bases de datos que tienen una columna en común.</p>
