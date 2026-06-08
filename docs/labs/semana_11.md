@@ -66,9 +66,9 @@ bar(1, color(red)) bar(2, color(blue))
 
 A veces también es conveniente añadir datos que corresponden a una base de datos diferente. Por ejemplo, piense que nos interesa ver el crecimiento del salario promedio de las personas.
 
-Podríamos simplemente calcular el salario promedio por año. Sin embargo, aún cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.
+Podríamos simplemente calcular el salario promedio por año. Sin embargo, aun cuando los salarios crecen, también suele haber inflación, por lo que el poder adquisitivo de las personas puede no aumentar.
 
-Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente, ya que la publica el Banco Central.
+Para esto podemos ajustar el salario con el índice de precios, pero esta variable está en una base de datos diferente.
 
 [Puede descargar los datos del IPC dando click al enlace](https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/969?Cuadro=51)
 

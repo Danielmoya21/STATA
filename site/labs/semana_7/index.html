@@ -12,7 +12,7 @@
         <link rel="prev" href="../semana_6/">
       
       
-        <link rel="next" href="../../practicas/stata1/">
+        <link rel="next" href="../semana_8/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -622,15 +622,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#grafico-de-cajas" class="md-nav__link">
-    <span class="md-ellipsis">
-      gráfico de cajas
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -640,6 +631,144 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semana_13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semana 13
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -927,15 +1056,6 @@
   <a href="#histograma" class="md-nav__link">
     <span class="md-ellipsis">
       histograma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grafico-de-cajas" class="md-nav__link">
-    <span class="md-ellipsis">
-      gráfico de cajas
     </span>
   </a>
   
@@ -1261,18 +1381,6 @@
 <div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">hist</span> amos_educacion,<span class="k"> by</span>(zona) frequency
 </code></pre></div>
 <p><br></p>
-<hr />
-<h3 id="grafico-de-cajas">gráfico de cajas</h3>
-<p>Por último se tiene el gráfico de cajas, que nos indica la distribución en cuartiles de alguna variable</p>
-<p>En este caso se realiza un gráfico de cajas para analizar la variable salario neto</p>
-<p><div class="highlight"><span class="filename">Grafico de cajas y bigotes</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">graph</span> box salario_neto
-</code></pre></div>
-En principio el gráfico se ve mal, ya que hay valores muy altos de salario que afectan la escala, si fuera posible excluir estos valores entonces se puede usar la opción <code>nooutsides</code></p>
-<div class="highlight"><span class="filename">Grafico de cajas y bigotes</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">graph</span> box salario_neto, nooutsides
-</code></pre></div>
-<p>De igual manera se puede dividir el análisis por grupos. Se puede por ejemplo comparar la distribución del salario de las personas según si tienen o no título de bachillerato</p>
-<div class="highlight"><span class="filename">Ejemplo</span><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">graph</span> box salario_neto, over(bachillerato) nooutsides
-</code></pre></div>
 
 
 
@@ -1325,6 +1433,8 @@ En principio el gráfico se ve mal, ya que hay valores muy altos de salario que 
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
